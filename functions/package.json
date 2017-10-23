@@ -1,0 +1,26 @@
+{
+  "name": "curriculumvitaecamilohenriquezmena",
+  "description": "Fulfillment for a Dialogflow",
+  "version": "0.0.1",
+  "private": true,
+  "license": "WTFPL",
+  "author": "Camilo Henríquez Mena",
+  "engines": {
+    "node": "6.11.1"
+  },
+  "scripts": {
+    "start": "firebase serve",
+    "deploy": "firebase deploy",
+    "test:watch": "node node_modules/.bin/ava --verbose --watch ./**/*ava.js"
+  },
+  "dependencies": {
+    "actions-on-google": "^1.5.x",
+    "firebase-admin": "^4.2.1",
+    "firebase-functions": "^0.5.7",
+    "apiai": "^4.0.3"
+  },
+  "devDependencies": {
+    "ava": "^0.22.0",
+    "sinon": "^4.0.1"
+  }
+}

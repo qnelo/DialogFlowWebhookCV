@@ -1,0 +1,92 @@
+{
+    "body": {
+        "id": "a5939633-fff0-4e61-b830-fada57949a35",
+        "timestamp": "2017-10-22T19:03:19.727Z",
+        "lang": "es",
+        "result": {
+            "source": "agent",
+            "resolvedQuery": "cuantos años de experiencia tiene?",
+            "speech": "",
+            "action": "calcularExperiancia",
+            "actionIncomplete": false,
+            "parameters": {
+                "date-period": "",
+                "experiencia": "12",
+                "experienciaDesarrollo": "8"
+            },
+            "contexts": [
+                {
+                    "name": "cv",
+                    "parameters": {
+                        "experienciaDesarrollo.original": "",
+                        "experiencia": "12",
+                        "date-period.original": "",
+                        "nombreUsuario": "camilo",
+                        "nombreUsuario.original": "camilo",
+                        "experiencia.original": "",
+                        "date-period": "",
+                        "experienciaDesarrollo": "8"
+                    },
+                    "lifespan": 5
+                },
+                {
+                    "name": "camilo",
+                    "parameters": {
+                        "experienciaDesarrollo.original": "",
+                        "experiencia": "12",
+                        "date-period.original": "",
+                        "nombreUsuario": "camilo",
+                        "nombreUsuario.original": "camilo",
+                        "experiencia.original": "",
+                        "date-period": "",
+                        "experienciaDesarrollo": "8"
+                    },
+                    "lifespan": 2
+                }
+            ],
+            "metadata": {
+                "intentId": "6c4139ef-05b4-4f6e-a3cc-5f4ca067c802",
+                "webhookUsed": "true",
+                "webhookForSlotFillingUsed": "true",
+                "intentName": "anoExperiencia"
+            },
+            "fulfillment": {
+                "speech": "",
+                "messages": [
+                    {
+                        "type": 4,
+                        "payload": {
+                            "telegram": {
+                                "text": "Camilo tiene 12 años de experiencia trabajando en distintas empresas del sector tecnológico, de los cuales, los últimos 8 años tienen relación con el desarrollo de software.",
+                                "reply_markup": {
+                                    "keyboard": [
+                                        [
+                                            "Último Trabajo de Camilo"
+                                        ],
+                                        [
+                                            "Estudios de Camilo"
+                                        ],
+                                        [
+                                            "¿Donde vive Camilo?"
+                                        ],
+                                        [
+                                            "¿Que es un chatbot?"
+                                        ]
+                                    ],
+                                    "one_time_keyboard": true,
+                                    "resize_keyboard": true
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            "score": 1
+        },
+        "status": {
+            "code": 200,
+            "errorType": "success"
+        },
+        "sessionId": "92a35d24-db6d-405a-be8f-0b36bad22645"
+    }
+}
