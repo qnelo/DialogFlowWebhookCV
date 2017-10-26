@@ -40,9 +40,6 @@ test('anoExperiencia intent', t => {
 
     const response = {
         json: (objectResponse) => {
-
-            console.info(JSON.stringify(objectResponse, null, 4));
-
             // Assert
             t.deepEqual(objectResponse.data, expectedResponse.data);
             t.deepEqual(objectResponse, expectedResponse);
