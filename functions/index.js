@@ -41,6 +41,29 @@ function sendResponse(requestSource, inputContexts, response, message) {
     let objResponse = {};
     objResponse.speech = message.text;
     objResponse.displayText = message.text;
+    objResponse.data = {
+        'telegram': {
+            'text': `Camilo tiene 12 años de experiencia trabajando en distintas empresas del sector tecnológico, de los cuales, los últimos 8 años tienen relación con el desarrollo de software.`,
+            'reply_markup': {
+                'keyboard': [
+                    [
+                        responsesText('anoExperiencia').quickReply[0]
+                    ],
+                    [
+                        responsesText('anoExperiencia').quickReply[1]
+                    ],
+                    [
+                        responsesText('anoExperiencia').quickReply[2]
+                    ],
+                    [
+                        responsesText('anoExperiencia').quickReply[3]
+                    ]
+                ],
+                'one_time_keyboard': true,
+                'resize_keyboard': true
+            }
+        }
+    };
 
     response.json(objResponse); // Send response to Dialogflow
     
