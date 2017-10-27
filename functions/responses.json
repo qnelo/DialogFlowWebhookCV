@@ -1,0 +1,28 @@
+{
+    "default": {
+        "text": "default",
+        "quickReply": []
+    },
+    "anoExperiencia": {
+        "text": "Camilo tiene 12 años de experiencia trabajando en distintas empresas del sector tecnológico, de los cuales, los últimos 8 años tienen relación con el desarrollo de software.",
+        "quickReply": [
+            "Último Trabajo de Camilo",
+            "Estudios de Camilo",
+            "¿Donde vive Camilo?",
+            "¿Que es un chatbot?"
+        ]
+    },
+    "becual": {
+        "text": [
+            "Becual es una empresa que busca conectar eficientemente, apalancados en la tecnología, a las empresas pyme con financiamientos y créditos, de manera que pudieran acceder en menores tiempos y en mejores condiciones",
+            "En otras palabras Becual es una plataforma de crowdfunding, que se orienta al área de préstamos",
+            "Las personas que tienen dinero se conectan de manera directa, con pequeñas y medianas empresas que necesitan financiamiento. El resultado es que las personas ganan más por sus inversiones y las empresas finalmente pagan menos por sus créditos."
+        ],
+        "quickReply": [
+            "Último Trabajo de Camilo",
+            "Estudios de Camilo",
+            "¿Donde vive Camilo?",
+            "¿Que es un chatbot?"
+        ]
+    }
+}

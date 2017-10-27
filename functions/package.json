@@ -11,6 +11,7 @@
   "scripts": {
     "start": "firebase serve",
     "deploy": "firebase deploy",
+    "test": "node_modules/.bin/nyc --reporter=lcov --reporter=text --check-coverage --lines 95 --functions 95 --branches 95 node node_modules/.bin/ava -v ./**/*ava.js",
     "test:watch": "node node_modules/.bin/ava --verbose --watch ./**/*ava.js"
   },
   "dependencies": {
@@ -21,6 +22,7 @@
   },
   "devDependencies": {
     "ava": "^0.22.0",
+    "nyc": "^11.2.1",
     "sinon": "^4.0.1"
   }
 }
