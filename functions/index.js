@@ -11,11 +11,13 @@ exports.curriculumVitaeResponses = functions.https.onRequest((request, response)
 
     const requestSource = (request.body.originalRequest)
         ? request.body.originalRequest.source : 'default';
+    
+    const context = request.body.result.contexts;
 
     console.info(`request: {requestSource: ${requestSource}, intent: ${intent}}`);
         
     // Send response to Dialogflow
     response.json(
-        replyAdapter(responses[intent], requestSource)
+        replyAdapter(responses[intent], requestSource, context)
     );
 });

@@ -3,6 +3,59 @@ const standartRequest = require('./standartRequest.json');
 const responses = require('../responses.json');
 const myFunctions = require('../index');
 
+test('Telegram Saludo', t => {
+    
+    // Arrange
+    let request = Object.create(standartRequest);
+    request.body.result.metadata.intentName = 'saludo';
+    request.body.result.contexts = [
+        {
+            'name': 'cv',
+            'parameters': {
+                'nombreUsuario': 'Huachimingo',
+                'nombreUsuario.original': 'Huachimingo'
+            },
+            'lifespan': 4
+        }
+    ];
+    request.body.originalRequest = { source: 'telegram' };
+    
+    const expectedResponse = {
+        speech: 'Hola Huachimingo, puedes consultar acerca de la experiencia de Camilo, sus estudios, trabajos o sobre este robot.',
+        displayText: 'Hola Huachimingo, puedes consultar acerca de la experiencia de Camilo, sus estudios, trabajos o sobre este robot.',
+        messages: [
+            {
+                'type': 0,
+                'platform': request.body.originalRequest.source,
+                'speech': 'Hola Huachimingo, puedes consultar acerca de la experiencia de Camilo, sus estudios, trabajos o sobre este robot.',
+            },
+            {
+                'type': 2,
+                'platform': request.body.originalRequest.source,
+                'title': 'Adicionalmente puedes ocupar los botones de preguntas rápidas que aparecen al presionar el icono de botones de telegram.',
+                'replies': [
+                    'Último Trabajo',
+                    'Estudios de Camilo',
+                    '¿Donde Vive?',
+                    '¿Que es un chatbot?'
+                ]
+            }
+        ]
+    };
+
+    const response = {
+        json: (objectResponse) => {
+            // Assert
+            t.deepEqual(objectResponse.data, expectedResponse.data);
+            t.deepEqual(objectResponse, expectedResponse);
+        }
+    };
+    
+    // Act
+    myFunctions.curriculumVitaeResponses(request, response);
+    
+});
+
 test('Telegram default intent', t => {
     
     // Arrange
@@ -16,7 +69,7 @@ test('Telegram default intent', t => {
         messages: [
             {
                 'type': 2,
-                'platform': 'telegram',
+                'platform': request.body.originalRequest.source,
                 'title': 'default',
                 'replies': []
             }
@@ -81,7 +134,7 @@ test('Telegram anoExperiencia intent', t => {
         messages: [
             {
                 'type': 2,
-                'platform': 'telegram',
+                'platform': request.body.originalRequest.source,
                 'title': responses.anoExperiencia.text[0],
                 'replies': [
                     responses.anoExperiencia.quickReply[0],
@@ -120,17 +173,17 @@ test('Telegram Becual intent', t => {
         messages: [
             {
                 type: 0,
-                platform: 'telegram',
+                platform: request.body.originalRequest.source,
                 speech: responses.becual.text[0]
             },
             {
                 type: 0,
-                platform: 'telegram',
+                platform: request.body.originalRequest.source,
                 speech: responses.becual.text[1]
             },
             {
                 'type': 2,
-                'platform': 'telegram',
+                'platform': request.body.originalRequest.source,
                 'title': responses.becual.text[2],
                 'replies': [
                     responses.becual.quickReply[0],
