@@ -1,10 +1,14 @@
 {
     "default": {
-        "text": "default",
+        "text": [
+            "default"
+        ],
         "quickReply": []
     },
     "anoExperiencia": {
-        "text": "Camilo tiene 12 años de experiencia trabajando en distintas empresas del sector tecnológico, de los cuales, los últimos 8 años tienen relación con el desarrollo de software.",
+        "text": [
+            "Camilo tiene 12 años de experiencia trabajando en distintas empresas del sector tecnológico, de los cuales, los últimos 8 años tienen relación con el desarrollo de software."
+        ],
         "quickReply": [
             "Último Trabajo de Camilo",
             "Estudios de Camilo",
@@ -19,10 +23,10 @@
             "Las personas que tienen dinero se conectan de manera directa, con pequeñas y medianas empresas que necesitan financiamiento. El resultado es que las personas ganan más por sus inversiones y las empresas finalmente pagan menos por sus créditos."
         ],
         "quickReply": [
-            "Último Trabajo de Camilo",
-            "Estudios de Camilo",
-            "¿Donde vive Camilo?",
-            "¿Que es un chatbot?"
+            "Becual",
+            "kuCloud",
+            "AS Consultores",
+            "Service Group"
         ]
     }
 }
