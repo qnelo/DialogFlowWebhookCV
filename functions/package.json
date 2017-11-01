@@ -12,7 +12,9 @@
     "start": "firebase serve",
     "deploy": "firebase deploy",
     "test": "node_modules/.bin/nyc --reporter=lcov --reporter=text --check-coverage --lines 95 --functions 95 --branches 95 node node_modules/.bin/ava -v ./**/*ava.js",
-    "test:watch": "node node_modules/.bin/ava --verbose --watch ./**/*ava.js"
+    "test:report": "node_modules/.bin/nyc report --reporter=lcov --reporter=lcov --check-coverage --lines 95 --functions 95 --branches 95 node node_modules/.bin/ava -v ./**/*ava.js",
+    "test:watch": "node node_modules/.bin/ava --verbose --watch ./**/*ava.js",
+    "report-coverage": "codecov"
   },
   "dependencies": {
     "actions-on-google": "^1.5.x",
