@@ -34,7 +34,7 @@ test('Telegram Saludo', t => {
                 'platform': request.body.originalRequest.source,
                 'title': 'Adicionalmente puedes ocupar los botones de preguntas rápidas que aparecen al presionar el icono de botones de telegram.',
                 'replies': [
-                    'Último Trabajo',
+                    'Trabajo Actual',
                     'Estudios de Camilo',
                     '¿Donde Vive?',
                     '¿Que es un chatbot?'
