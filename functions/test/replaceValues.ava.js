@@ -27,7 +27,7 @@ test('replaceValue Test with parameters and object', (t) => {
         ]
     };
 
-    let output = replace(input);
+    let output = replace(input.object, input.text);
 
     t.is(output, 'hola Huachimingo Policarpo como xuxa estas');
 
@@ -59,7 +59,7 @@ test('replaceValue Test with one parameters and object', (t) => {
         ]
     };
     
-    let output = replace(input);
+    let output = replace(input.object, input.text);
     
     t.is(output, 'hola Huachimingo como estas');
     
@@ -81,7 +81,7 @@ test('replaceValue Test without parameters', (t) => {
         ]
     };
 
-    let output = replace(input);
+    let output = replace(input.object, input.text);
 
     t.is(output, 'hola como estas');
 
@@ -94,7 +94,7 @@ test('replaceValue Test without parameters and empty object', (t) => {
         object: []
     };
 
-    let output = replace(input);
+    let output = replace(input.object, input.text);
 
     t.is(output, 'hola como estas');
 

@@ -29,7 +29,7 @@ module.exports = (responseText, requestSource, context) => {
 
     let output = {};
     output.speech = output.displayText
-        = replaceValues({ 'text': responseText.text[0], 'object': context });
+        = replaceValues(context, responseText.text[0]);
     
     // TELEGRAM -> Last text must be the title field in quick replys
     let textArray = Object.create(responseText.text);
@@ -38,12 +38,12 @@ module.exports = (responseText, requestSource, context) => {
     output.messages = [];
     output.messages = textArray.map(text => messageFormatter(
         requestSource,
-        replaceValues({ 'object': context, 'text': text })
+        replaceValues(context, text)
     ));
     output.messages.push(telegramQuickReplyFormatter(
         requestSource,
         responseText,
-        replaceValues({ 'object': context, 'text': lastText })
+        replaceValues(context, lastText)
     ));
     
     return output;
