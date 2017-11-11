@@ -53,11 +53,37 @@
     "chatbot": {
         "text": [
             "Un Chatbot es un robot cuyo objetivo es simular la conversación con una persona.",
-            "En especifico, la función de este chatbot es entregar información sobre el curriculum vitae de Camilo."
+            "En específico, la función de este chatbot es entregar información sobre el curriculum vitae de Camilo."
         ],
         "quickReply": [
             "¿Por qué un chatbot?",
             "Tecnologías que ocupa un chatbot"
+        ]
+    },
+    "chatbotObjetivo": {
+        "text": [
+            "Este chatbot nació en Octubre de 2017 para lograr varios objetivos.",
+            "El primero es interiorizarse en las tecnologías detrás de las interfaces conversacionales que ocupan machine learning para el reconocimiento de intenciones de expresadas textualmente o verbalmente.",
+            "El segundo objetivo es trabajar con tecnologías de Google como DialogFlow y Firebase entre otras",
+            "El tercer objetivo es mostrar una alternativa tecnológica que cuente sobre mi experiencia laboral en áreas de la informática."
+        ],
+        "quickReply": [
+            "Que es un chatbot?",
+            "Tecnologías que ocupa un chatbot",
+            "Experiencia de Camilo"
+        ]
+    },
+    "tecnologiaChatbot": {
+        "text": [
+            "Detrás de este chatbot se encuentran varias tecnologías implicadas, las dos más importantes que caben destacar son:",
+            "La primera de ellas es DialogFlow (http://dialogflow.com), la cual permite crear interfaces conversacionales e integrarse con varias plataformas como telegram, slack, facebook, etc.",
+            "Google Firebase es utilizada para alojar las funciones javascript que realizan el procesamiento de las intenciones detectadas por Dialogflow y entregar la respuesta adecuada a cada una de las preguntas realizadas al chatbot.",
+            "Pueden ver las funciones en el siguiente repositorio git de Camilo https://github.com/qnelo/DialogFlowWebhookCV"
+        ],
+        "quickReply": [
+            "¿Por qué un chatbot?",
+            "Tecnologías que ocupa un chatbot",
+            "Experiencia de Camilo"
         ]
     }
 }
