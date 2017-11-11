@@ -44,10 +44,20 @@
             "Puedes consultar por otros trabajos que ha tenido Camilo presionando los botones de preguntas rápidas de abajo."
         ],
         "quickReply": [
-            "Becual",
             "kuCloud",
             "AS Consultores",
-            "Service Group"
+            "Service Group",
+            "Workmate"
+        ]
+    },
+    "chatbot": {
+        "text": [
+            "Un Chatbot es un robot cuyo objetivo es simular la conversación con una persona.",
+            "En especifico, la función de este chatbot es entregar información sobre el curriculum vitae de Camilo."
+        ],
+        "quickReply": [
+            "¿Por qué un chatbot?",
+            "Tecnologías que ocupa un chatbot"
         ]
     }
 }

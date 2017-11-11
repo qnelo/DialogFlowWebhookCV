@@ -182,9 +182,14 @@ test('Telegram Becual intent', t => {
                 speech: responses.becual.text[1]
             },
             {
+                type: 0,
+                platform: request.body.originalRequest.source,
+                speech: responses.becual.text[2]
+            },
+            {
                 'type': 2,
                 'platform': request.body.originalRequest.source,
-                'title': responses.becual.text[2],
+                'title': responses.becual.text[3],
                 'replies': [
                     responses.becual.quickReply[0],
                     responses.becual.quickReply[1],
