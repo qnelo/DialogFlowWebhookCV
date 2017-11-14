@@ -1,6 +1,6 @@
 const replaceValues = require('./replaceValues');
 const messageFormatter = (requestSource, text) => {
-    
+
     const message = {
         'other': {
             type: 0,
@@ -25,12 +25,20 @@ const telegramQuickReplyFormatter = (requestSource, responseText, lastText) => {
     };
 };
 
+const telegramMediaFormatter = (requestSource, media) => {
+    return {
+        type: 3,
+        platform: requestSource,
+        imageUrl: media
+    };
+}
+
 module.exports = (responseText, requestSource, context) => {
 
     let output = {};
     output.speech = output.displayText
         = replaceValues(context, responseText.text[0]);
-    
+
     // TELEGRAM -> Last text must be the title field in quick replys
     let textArray = Object.create(responseText.text);
     const lastText = textArray.pop();
@@ -40,11 +48,21 @@ module.exports = (responseText, requestSource, context) => {
         requestSource,
         replaceValues(context, text)
     ));
-    output.messages.push(telegramQuickReplyFormatter(
-        requestSource,
-        responseText,
-        replaceValues(context, lastText)
-    ));
-    
+    if (responseText.media) {
+        output.messages.push(
+            telegramMediaFormatter(
+                requestSource,
+                responseText.media
+            )
+        );
+    };
+    output.messages.push(
+        telegramQuickReplyFormatter(
+            requestSource,
+            responseText,
+            replaceValues(context, lastText)
+        )
+    );
+    console.info(`response:${JSON.stringify(output, null, 4)}`);
     return output;
 };

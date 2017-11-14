@@ -98,5 +98,19 @@
             "Experiencia de Camilo",
             "¿Cuales son los hobbies de Camilo?"
         ]
+    },
+    "disponibilidad": {
+        "text": [
+            "En estos momentos Camilo no está en búsqueda de nuevos desafíos, está muy comprometido con su actual rol.",
+            "De todas maneras puedes contactar a Camilo para hablar de algún proyecto mediante un correo electrónico en camilo.henriquez.mena@gmail.com",
+            "O mediante un mensaje a su linkedin en https://www.linkedin.com/in/camilohenriquezmena/"
+        ],
+        "media": "https://media.giphy.com/media/XIqCQx02E1U9W/giphy.gif",
+        "quickReply": [
+            "¿Donde Vive Camilo?",
+            "¿Que edad tiene Camilo?",
+            "Experiencia de Camilo",
+            "¿Cuales son los hobbies de Camilo?"
+        ]
     }
 }

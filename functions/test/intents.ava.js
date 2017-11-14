@@ -4,7 +4,7 @@ const responses = require('../responses.json');
 const myFunctions = require('../index');
 
 test('Telegram Saludo', t => {
-    
+
     // Arrange
     let request = Object.create(standartRequest);
     request.body.result.metadata.intentName = 'saludo';
@@ -19,7 +19,7 @@ test('Telegram Saludo', t => {
         }
     ];
     request.body.originalRequest = { source: 'telegram' };
-    
+
     const expectedResponse = {
         speech: 'Hola Huachimingo, puedes consultar acerca de la experiencia de Camilo, sus estudios, trabajos o sobre este robot.',
         displayText: 'Hola Huachimingo, puedes consultar acerca de la experiencia de Camilo, sus estudios, trabajos o sobre este robot.',
@@ -50,19 +50,19 @@ test('Telegram Saludo', t => {
             t.deepEqual(objectResponse, expectedResponse);
         }
     };
-    
+
     // Act
     myFunctions.curriculumVitaeResponses(request, response);
-    
+
 });
 
 test('Telegram default intent', t => {
-    
+
     // Arrange
     let request = Object.create(standartRequest);
     request.body.result.metadata.intentName = '';
     request.body.originalRequest = { source: 'telegram' };
-    
+
     const expectedResponse = {
         speech: responses.default.text[0],
         displayText: responses.default.text[0],
@@ -83,19 +83,19 @@ test('Telegram default intent', t => {
             t.deepEqual(objectResponse, expectedResponse);
         }
     };
-    
+
     // Act
     myFunctions.curriculumVitaeResponses(request, response);
-    
+
 });
 
 test('Default intent with undefined request source', t => {
-    
+
     // Arrange
     let request = Object.create(standartRequest);
     request.body.result.metadata.intentName = '';
     request.body.originalRequest = null;
-    
+
     const expectedResponse = {
         speech: responses.default.text[0],
         displayText: responses.default.text[0],
@@ -115,19 +115,19 @@ test('Default intent with undefined request source', t => {
             t.deepEqual(objectResponse, expectedResponse);
         }
     };
-    
+
     // Act
     myFunctions.curriculumVitaeResponses(request, response);
-    
+
 });
 
 test('Telegram anoExperiencia intent', t => {
-    
+
     // Arrange
     let request = Object.create(standartRequest);
     request.body.result.metadata.intentName = 'anoExperiencia';
     request.body.originalRequest = { source: 'telegram' };
-    
+
     const expectedResponse = {
         speech: responses.anoExperiencia.text[0],
         displayText: responses.anoExperiencia.text[0],
@@ -144,7 +144,7 @@ test('Telegram anoExperiencia intent', t => {
                 ]
             }
         ]
-        
+
     };
 
     const response = {
@@ -154,19 +154,19 @@ test('Telegram anoExperiencia intent', t => {
             t.deepEqual(objectResponse, expectedResponse);
         }
     };
-    
+
     // Act
     myFunctions.curriculumVitaeResponses(request, response);
-    
+
 });
 
 test('Telegram Becual intent', t => {
-    
+
     // Arrange
     let request = Object.create(standartRequest);
     request.body.result.metadata.intentName = 'becual';
     request.body.originalRequest = { source: 'telegram' };
-    
+
     const expectedResponse = {
         speech: responses.becual.text[0],
         displayText: responses.becual.text[0],
@@ -207,8 +207,61 @@ test('Telegram Becual intent', t => {
             t.deepEqual(objectResponse, expectedResponse);
         }
     };
-    
+
     // Act
     myFunctions.curriculumVitaeResponses(request, response);
-    
+
+});
+
+test('Telegram disponibilidad intent', t => {
+
+    // Arrange
+    let request = Object.create(standartRequest);
+    request.body.result.metadata.intentName = 'disponibilidad';
+    request.body.originalRequest = { source: 'telegram' };
+
+    const expectedResponse = {
+        speech: responses.disponibilidad.text[0],
+        displayText: responses.disponibilidad.text[0],
+        messages: [
+            {
+                type: 0,
+                platform: request.body.originalRequest.source,
+                speech: responses.disponibilidad.text[0]
+            },
+            {
+                type: 0,
+                platform: request.body.originalRequest.source,
+                speech: responses.disponibilidad.text[1]
+            },
+            {
+                "type": 3,
+                "platform": request.body.originalRequest.source,
+                "imageUrl": responses.disponibilidad.media
+            },
+            {
+                'type': 2,
+                'platform': request.body.originalRequest.source,
+                'title': responses.disponibilidad.text[2],
+                'replies': [
+                    responses.disponibilidad.quickReply[0],
+                    responses.disponibilidad.quickReply[1],
+                    responses.disponibilidad.quickReply[2],
+                    responses.disponibilidad.quickReply[3]
+                ]
+            }
+        ]
+    };
+
+    const response = {
+        json: (objectResponse) => {
+            // Assert
+            t.deepEqual(objectResponse.data, expectedResponse.data);
+            t.deepEqual(objectResponse, expectedResponse);
+        }
+    };
+
+    // Act
+    myFunctions.curriculumVitaeResponses(request, response);
+
 });

@@ -1,18 +1,25 @@
 const test = require('ava');
 const replyAdapter = require('../replyAdapter');
 
-test('telegram replyAdapter', t => {
+test('telegram replyAdapter with media', t => {
 
     //Arrange
     const responseText = {
         text: ['texto de prueba.'],
-        quickReply: ['0', '1', '2', '3']
+        quickReply: ['0', '1', '2', '3'],
+        media: 'media'
     };
     const requestSource = 'telegram';
     const expectedReply = {
         'displayText': responseText.text[0],
         'speech': responseText.text[0],
         'messages': [
+            {
+                'type': 3,
+                'platform': requestSource,
+                'imageUrl': responseText.media,
+
+            },
             {
                 'type': 2,
                 'platform': requestSource,
