@@ -15,7 +15,7 @@
         "quickReply": [
             "Trabajo Actual",
             "Estudios de Camilo",
-            "¿Donde Vive?",
+            "¿Donde vive?",
             "¿Que es un chatbot?"
         ]
     },
@@ -93,7 +93,7 @@
             "O mediante un mensaje a su linkedin en https://www.linkedin.com/in/camilohenriquezmena/"
         ],
         "quickReply": [
-            "¿Donde Vive Camilo?",
+            "¿Donde vive Camilo?",
             "¿Que edad tiene Camilo?",
             "Experiencia de Camilo",
             "¿Cuales son los hobbies de Camilo?"
@@ -107,8 +107,20 @@
         ],
         "media": "https://media.giphy.com/media/XIqCQx02E1U9W/giphy.gif",
         "quickReply": [
-            "¿Donde Vive Camilo?",
+            "¿Donde vive Camilo?",
             "¿Que edad tiene Camilo?",
+            "Experiencia de Camilo",
+            "¿Cuales son los hobbies de Camilo?"
+        ]
+    },
+    "edad": {
+        "text": [
+            "Camilo tiene 34 años de edad.",
+            "Nació el 12 de julio de 1983."
+        ],
+        "quickReply": [
+            "¿Donde vive Camilo?",
+            "¿Que idiomas habla?",
             "Experiencia de Camilo",
             "¿Cuales son los hobbies de Camilo?"
         ]

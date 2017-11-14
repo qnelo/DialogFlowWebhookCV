@@ -36,7 +36,7 @@ test('Telegram Saludo', t => {
                 'replies': [
                     'Trabajo Actual',
                     'Estudios de Camilo',
-                    '¿Donde Vive?',
+                    '¿Donde vive?',
                     '¿Que es un chatbot?'
                 ]
             }
