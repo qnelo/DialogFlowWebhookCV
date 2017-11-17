@@ -1,0 +1,64 @@
+{
+    "responseId": "c48ef8c9-a2f8-48e2-b32c-c9eb8c0699dc",
+    "queryResult": {
+        "queryText": "hola",
+        "action": "input.welcome",
+        "parameters": {},
+        "allRequiredParamsPresent": true,
+        "outputContexts": [
+            {
+                "name": "projects/newagent-86de9/agent/sessions/3d2baafe-b6dd-4fb6-bd70-c34f77c47ff2/contexts/cv",
+                "lifespanCount": 5
+            },
+            {
+                "name": "projects/newagent-86de9/agent/sessions/3d2baafe-b6dd-4fb6-bd70-c34f77c47ff2/contexts/camilo",
+                "lifespanCount": 4
+            },
+            {
+                "name": "projects/newagent-86de9/agent/sessions/3d2baafe-b6dd-4fb6-bd70-c34f77c47ff2/contexts/saludo",
+                "lifespanCount": 1
+            },
+            {
+                "name": "projects/newagent-86de9/agent/sessions/3d2baafe-b6dd-4fb6-bd70-c34f77c47ff2/contexts/generic",
+                "lifespanCount": 2,
+                "parameters": {
+                    "telegram_chat_id": "187410268",
+                    "nombreUsuario": "wenas",
+                    "nombreUsuario.original": "wenas!!!"
+                }
+            }
+        ],
+        "intent": {
+            "name": "projects/newagent-86de9/agent/intents/22e9b5f0-26cf-4802-a7c5-6f4271c5d498",
+            "displayName": "Default Welcome Intent"
+        },
+        "intentDetectionConfidence": 1,
+        "diagnosticInfo": {},
+        "languageCode": "es"
+    },
+    "originalDetectIntentRequest": {
+        "source": "telegram",
+        "payload": {
+            "update_id": 26496357,
+            "message": {
+                "date": 1510881871,
+                "chat": {
+                    "id": 187410268,
+                    "type": "private",
+                    "first_name": "K",
+                    "username": "Qnelo"
+                },
+                "message_id": 2025,
+                "from": {
+                    "language_code": "es-419",
+                    "id": 187410268,
+                    "is_bot": false,
+                    "first_name": "K",
+                    "username": "Qnelo"
+                },
+                "text": "hola"
+            }
+        }
+    },
+    "session": "projects/newagent-86de9/agent/sessions/3d2baafe-b6dd-4fb6-bd70-c34f77c47ff2"
+}

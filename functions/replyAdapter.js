@@ -63,6 +63,6 @@ module.exports = (responseText, requestSource, context) => {
             replaceValues(context, lastText)
         )
     );
-    // console.info(`response:${JSON.stringify(output, null, 4)}`);
+    console.info(`response:${JSON.stringify(output, null, 4)}`);
     return output;
 };

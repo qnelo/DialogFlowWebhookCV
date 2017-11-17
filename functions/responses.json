@@ -1,8 +1,8 @@
 {
-    "Default Welcome Intent": {
+    "input.welcome": {
         "text": [
-            "¡Hola! Soy el chatbot curriculum vitae de Camilo Henríquez. Conmigo puedes consultarme sobre la experiencia profesional de mi creador.",
-            "Tengo pocos meses de edad, por lo tanto es probable que no pueda ayudarte todo lo bien que quisiera, pero día a día y cada vez que hablo adquiero más experiencia ya que estoy bajo entrenamiento.",
+            "¡Hola! Soy el chatbot curriculum vitae de Camilo Henríquez. Conmigo puedes consultar sobre la experiencia profesional de mi creador.",
+            "Tengo pocos meses de edad, por lo tanto es probable que no pueda ayudarte todo lo bien que quisiera, pero día a día y cada vez que hablo adquiero más experiencia, ya que estoy bajo entrenamiento.",
             "Pero antes de empezar a conversar, dime como te llamas",
             ":)"
         ],

@@ -6,14 +6,14 @@ const replyAdapter = require('./replyAdapter');
 
 exports.curriculumVitaeResponses = functions.https.onRequest((request, response) => {
     
-    const intent = (!request.body.result.metadata.intentName)
-        ? 'default' : request.body.result.metadata.intentName;
+    const intent = (!request.body.queryResult.action)
+        ? 'default' : request.body.queryResult.action;
 
-    const requestSource = (request.body.originalRequest)
-        ? request.body.originalRequest.source : 'default';
+    const requestSource = (request.body.originalDetectIntentRequest)
+        ? request.body.originalDetectIntentRequest.source : 'default';
     
-    const context = request.body.result.contexts;
-
+    const context = request.body.outputContexts;
+    
     console.info(`request: {requestSource: ${requestSource}, intent: ${intent}}`);
         
     // Send response to Dialogflow
