@@ -31,7 +31,7 @@ const telegramMediaFormatter = (requestSource, media) => {
         platform: requestSource,
         imageUrl: media
     };
-}
+};
 
 module.exports = (responseText, requestSource, context) => {
 
@@ -55,7 +55,7 @@ module.exports = (responseText, requestSource, context) => {
                 responseText.media
             )
         );
-    };
+    }
     output.messages.push(
         telegramQuickReplyFormatter(
             requestSource,

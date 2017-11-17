@@ -1,7 +1,8 @@
 {
     "Default Welcome Intent": {
         "text": [
-            "¡Hola! Soy el chatbot curriculum vitae de Camilo Henríquez. Puedes consultarme sobre la experiencia profesional de mi creador.",
+            "¡Hola! Soy el chatbot curriculum vitae de Camilo Henríquez. Conmigo puedes consultarme sobre la experiencia profesional de mi creador.",
+            "Tengo pocos meses de edad, por lo tanto es probable que no pueda ayudarte todo lo bien que quisiera, pero día a día y cada vez que hablo adquiero más experiencia ya que estoy bajo entrenamiento.",
             "Pero antes de empezar a conversar, dime como te llamas",
             ":)"
         ],
@@ -117,6 +118,17 @@
         "text": [
             "Camilo tiene 34 años de edad.",
             "Nació el 12 de julio de 1983."
+        ],
+        "quickReply": [
+            "¿Donde vive Camilo?",
+            "¿Que idiomas habla?",
+            "Experiencia de Camilo",
+            "¿Cuales son los hobbies de Camilo?"
+        ]
+    },
+    "estadoCivil": {
+        "text": [
+            "El estado civil de Camilo es soltero, mas no por eso está solo, tiene novia desde hace 4 años."
         ],
         "quickReply": [
             "¿Donde vive Camilo?",
