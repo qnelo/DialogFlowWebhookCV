@@ -25,6 +25,7 @@
   "devDependencies": {
     "ava": "^0.22.0",
     "nyc": "^11.2.1",
+    "ramda": "^0.25.0",
     "sinon": "^4.0.1"
   }
 }

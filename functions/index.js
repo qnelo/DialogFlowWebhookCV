@@ -5,19 +5,21 @@ const responses = require('./responses.json');
 const replyAdapter = require('./replyAdapter');
 
 exports.curriculumVitaeResponses = functions.https.onRequest((request, response) => {
-    
-    const intent = (!request.body.queryResult.action)
-        ? 'default' : request.body.queryResult.action;
 
-    const requestSource = (request.body.originalDetectIntentRequest)
-        ? request.body.originalDetectIntentRequest.source : 'default';
-    
-    const context = request.body.outputContexts;
-    
-    console.info(`request: {requestSource: ${requestSource}, intent: ${intent}}`);
-        
+    console.info(`complete request: ${JSON.stringify(request.body, null, 4)}`);
+
+    const action = (request.body.queryResult.action)
+        ? request.body.queryResult.action : 'default';
+
+    const requestSource = (request.body.originalDetectIntentRequest.payload.source)
+        ? request.body.originalDetectIntentRequest.payload.source.toUpperCase() : 'PLATFORM_UNSPECIFIED';
+
+    const context = request.body.queryResult.outputContexts;
+
+    console.info(`request: {requestSource: ${requestSource}, action: ${action}}`);
+
     // Send response to Dialogflow
     response.json(
-        replyAdapter(responses[intent], requestSource, context)
+        replyAdapter(responses[action], requestSource, context)
     );
 });

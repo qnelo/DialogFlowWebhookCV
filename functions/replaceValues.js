@@ -14,8 +14,9 @@ const objectAdapter = (dialogflowContexts, parameters) => {
             
             let newParameter = parameter.replace('$', '').split('.');
             
-            if (context.parameters[newParameter[1]] && context.name === newParameter[0]) {
-                parametersObject[`$${context.name}.${newParameter[1]}`]
+            if (context.parameters[newParameter[1]]
+            && context.name.split('/').pop() === newParameter[0]) {
+                parametersObject[`$${context.name.split('/').pop()}.${newParameter[1]}`]
                 = context.parameters[newParameter[1]];
             }
         }

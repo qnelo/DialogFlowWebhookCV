@@ -7,22 +7,38 @@ test('replaceValue Test with parameters and object', (t) => {
         text: 'hola $cv.nombreUsuario $cv.apellido como $saludo.insulto estas',
         object: [
             {
-                'name': 'cv',
+                'name': 'projects/camilocvapi2/agent/sessions/2881f78f/contexts/cv',
+                'lifespanCount': 5,
                 'parameters': {
                     'nombreUsuario': 'Huachimingo',
                     'nombreUsuario.original': 'Huachimingo',
                     'apellido': 'Policarpo',
                     'apellido.original': 'Policarpo'
-                },
-                'lifespan': 4
+                }
             },
             {
-                'name': 'saludo',
+                'name': 'projects/camilocvapi2/agent/sessions/2881f78f/contexts/camilo',
+                'lifespanCount': 3,
+                'parameters': {
+                    'nombreUsuario': 'Huachimingo',
+                    'nombreUsuario.original': 'Huachimingo'
+                }
+            },
+            {
+                'name': 'projects/camilocvapi2/agent/sessions/2881f78f/contexts/saludo',
                 'parameters': {
                     'insulto': 'xuxa',
                     'insulto.original': 'xuxa'
-                },
-                'lifespan': 4
+                }
+            },
+            {
+                'name': 'projects/camilocvapi2/agent/sessions/2881f78f/contexts/generic',
+                'lifespanCount': 4,
+                'parameters': {
+                    'telegram_chat_id': 187410268,
+                    'nombreUsuario': 'Huachimingo',
+                    'nombreUsuario.original': 'Huachimingo'
+                }
             }
         ]
     };
@@ -39,7 +55,7 @@ test('replaceValue Test with one parameters and object', (t) => {
         text: 'hola $cv.nombreUsuario como estas',
         object: [
             {
-                'name': 'cv',
+                'name': 'projects/camilocvapi2/agent/sessions/2881f78f/contexts/cv',
                 'parameters': {
                     'nombreUsuario': 'Huachimingo',
                     'nombreUsuario.original': 'Huachimingo',
