@@ -1,30 +1,29 @@
 const test = require('ava');
 const R = require('ramda');
-const standartRequest = require('./standartRequest.json');
 const newStandartRequest = require('./newStandartRequest.json');
 const responses = require('../responses.json');
 const myFunctions = require('../index');
 
-test.only('Telegram Saludo', t => {
+test('Telegram Saludo', t => {
 
     // Arrange
     let request = R.clone(newStandartRequest);
     request.body.queryResult.action = 'saludo';
-    request.body.originalDetectIntentRequest.source = 'TELEGRAM';
+    request.body.originalDetectIntentRequest.payload.source = 'telegram';
     request.body.queryResult.outputContexts = [
         {
-            "name": "projects/newagent-86de9/agent/sessions/0a7124e9-8a0b-45a8-b7ef-035452978583/contexts/cv",
-            "lifespanCount": 5,
-            "parameters": {
-                "nombreUsuario": "Huachimingo",
-                "nombreUsuario.original": "Huachimingo"
+            name: 'projects/newagent-86de9/agent/sessions/0a7124e9-8a0b-45a8-b7ef-035452978583/contexts/cv',
+            lifespanCount: 5,
+            parameters: {
+                nombreUsuario: 'Huachimingo',
+                'nombreUsuario.original': 'Huachimingo'
             }
         },
         {
-            "name": "projects/newagent-86de9/agent/sessions/0a7124e9-8a0b-45a8-b7ef-035452978583/contexts/saludo",
-            "parameters": {
-                "nombreUsuario": "Huachimingo",
-                "nombreUsuario.original": "Huachimingo"
+            name: 'projects/newagent-86de9/agent/sessions/0a7124e9-8a0b-45a8-b7ef-035452978583/contexts/saludo',
+            parameters: {
+                nombreUsuario: 'Huachimingo',
+                'nombreUsuario.original': 'Huachimingo'
             }
         }
     ];
@@ -33,23 +32,21 @@ test.only('Telegram Saludo', t => {
         fulfillmentText: 'Hola Huachimingo, puedes consultar acerca de la experiencia de Camilo, sus estudios, trabajos o sobre este robot.',
         fulfillmentMessages: [
             {
-                platform: request.body.originalDetectIntentRequest.source,
+                platform: request.body.originalDetectIntentRequest.payload.source.toUpperCase(),
                 text: {
                     text: [
-                        'Hola Huachimingo, puedes consultar acerca de la experiencia de Camilo, sus estudios, trabajos o sobre este robot.',
-                        'Adicionalmente puedes ocupar los botones de preguntas rápidas que aparecen al presionar el icono de botones de telegram.'
-                    ]
+                        'Hola Huachimingo, puedes consultar acerca de la experiencia de Camilo, sus estudios, trabajos o sobre este robot.'                    ]
                 }
             },
             {
-                platform: request.body.originalDetectIntentRequest.source,
+                platform: request.body.originalDetectIntentRequest.payload.source.toUpperCase(),
                 quickReplies: {
-                    title: responses.becual.text[3],
+                    title: responses.saludo.text[1],
                     quickReplies: [
-                        'Trabajo Actual',
-                        'Estudios de Camilo',
-                        '¿Donde vive?',
-                        '¿Que es un chatbot?'
+                        responses.saludo.quickReply[0],
+                        responses.saludo.quickReply[1],
+                        responses.saludo.quickReply[2],
+                        responses.saludo.quickReply[3]
                     ]
                 }
             }
@@ -69,22 +66,28 @@ test.only('Telegram Saludo', t => {
 
 });
 
-test.skip('Telegram default intent', t => {
+test('Telegram default intent', t => {
 
     // Arrange
-    let request = Object.create(standartRequest);
-    request.body.result.metadata.intentName = '';
-    request.body.originalRequest = { source: 'telegram' };
+    let request = R.clone(newStandartRequest);
+    request.body.queryResult.action = '';
+    request.body.originalDetectIntentRequest.payload.source = 'telegram';
 
     const expectedResponse = {
-        speech: responses.default.text[0],
-        displayText: responses.default.text[0],
-        messages: [
+        fulfillmentText: responses.default.text[0],
+        fulfillmentMessages: [
             {
-                'type': 2,
-                'platform': request.body.originalRequest.source,
-                'title': 'default',
-                'replies': []
+                platform: request.body.originalDetectIntentRequest.payload.source.toUpperCase(),
+                text: {
+                    text: []
+                }
+            },
+            {
+                platform: request.body.originalDetectIntentRequest.payload.source.toUpperCase(),
+                quickReplies: {
+                    title: responses.default.text[0],
+                    quickReplies: []
+                }
             }
         ]
     };
@@ -102,25 +105,32 @@ test.skip('Telegram default intent', t => {
 
 });
 
-test.skip('Default intent with undefined request source', t => {
+test('Default intent with undefined request source', t => {
 
     // Arrange
-    let request = Object.create(standartRequest);
-    request.body.result.metadata.intentName = '';
-    request.body.originalRequest = null;
+    let request = R.clone(newStandartRequest);
+    request.body.queryResult.action = '';
+    request.body.originalDetectIntentRequest.payload.source = null;
 
     const expectedResponse = {
-        speech: responses.default.text[0],
-        displayText: responses.default.text[0],
-        messages: [
+        fulfillmentText: responses.default.text[0],
+        fulfillmentMessages: [
             {
-                'type': 2,
-                'platform': 'default',
-                'title': 'default',
-                'replies': []
+                platform: 'PLATFORM_UNSPECIFIED',
+                text: {
+                    text: []
+                }
+            },
+            {
+                platform: 'PLATFORM_UNSPECIFIED',
+                quickReplies: {
+                    title: responses.default.text[0],
+                    quickReplies: []
+                }
             }
         ]
     };
+
     const response = {
         json: (objectResponse) => {
             // Assert
@@ -137,27 +147,32 @@ test.skip('Default intent with undefined request source', t => {
 test('Telegram anoExperiencia intent', t => {
 
     // Arrange
-    let request = Object.create(newStandartRequest);
+    let request = R.clone(newStandartRequest);
     request.body.queryResult.action = 'anoExperiencia';
-    request.body.originalRequest = { source: 'telegram' };
+    request.body.originalDetectIntentRequest.payload.source = 'telegram';
 
     const expectedResponse = {
-        speech: responses.anoExperiencia.text[0],
-        displayText: responses.anoExperiencia.text[0],
-        messages: [
+        fulfillmentText: responses.anoExperiencia.text[0],
+        fulfillmentMessages: [
             {
-                'type': 2,
-                'platform': request.body.originalRequest.source,
-                'title': responses.anoExperiencia.text[0],
-                'replies': [
-                    responses.anoExperiencia.quickReply[0],
-                    responses.anoExperiencia.quickReply[1],
-                    responses.anoExperiencia.quickReply[2],
-                    responses.anoExperiencia.quickReply[3]
-                ]
+                platform: request.body.originalDetectIntentRequest.payload.source.toUpperCase(),
+                text: {
+                    text: []
+                }
+            },
+            {
+                platform: request.body.originalDetectIntentRequest.payload.source.toUpperCase(),
+                quickReplies: {
+                    title: responses.anoExperiencia.text[0],
+                    quickReplies: [
+                        responses.anoExperiencia.quickReply[0],
+                        responses.anoExperiencia.quickReply[1],
+                        responses.anoExperiencia.quickReply[2],
+                        responses.anoExperiencia.quickReply[3]
+                    ]
+                }
             }
         ]
-
     };
 
     const response = {
@@ -173,18 +188,18 @@ test('Telegram anoExperiencia intent', t => {
 
 });
 
-test.only('Telegram Becual intent', t => {
+test('Telegram Becual intent', t => {
 
     // Arrange
     let request = R.clone(newStandartRequest);
     request.body.queryResult.action = 'becual';
-    request.body.originalDetectIntentRequest.source = 'TELEGRAM';
+    request.body.originalDetectIntentRequest.payload.source = 'telegram';
 
     const expectedResponse = {
         fulfillmentText: responses.becual.text[0],
         fulfillmentMessages: [
             {
-                platform: request.body.originalDetectIntentRequest.source,
+                platform: request.body.originalDetectIntentRequest.payload.source.toUpperCase(),
                 text: {
                     text: [
                         responses.becual.text[0],
@@ -194,7 +209,7 @@ test.only('Telegram Becual intent', t => {
                 }
             },
             {
-                platform: request.body.originalDetectIntentRequest.source,
+                platform: request.body.originalDetectIntentRequest.payload.source.toUpperCase(),
                 quickReplies: {
                     title: responses.becual.text[3],
                     quickReplies: [
@@ -224,39 +239,33 @@ test.only('Telegram Becual intent', t => {
 test('Telegram disponibilidad intent', t => {
 
     // Arrange
-    let request = Object.create(standartRequest);
-    request.body.result.metadata.intentName = 'disponibilidad';
-    request.body.originalRequest = { source: 'telegram' };
+    let request = R.clone(newStandartRequest);
+    request.body.queryResult.action = 'disponibilidad';
+    request.body.originalDetectIntentRequest.payload.source = 'telegram';
 
     const expectedResponse = {
-        speech: responses.disponibilidad.text[0],
-        displayText: responses.disponibilidad.text[0],
-        messages: [
+        fulfillmentText: responses.disponibilidad.text[0],
+        fulfillmentMessages: [
             {
-                type: 0,
-                platform: request.body.originalRequest.source,
-                speech: responses.disponibilidad.text[0]
+                platform: request.body.originalDetectIntentRequest.payload.source.toUpperCase(),
+                text: {
+                    text: [
+                        responses.disponibilidad.text[0],
+                        responses.disponibilidad.text[1]
+                    ]
+                }
             },
             {
-                type: 0,
-                platform: request.body.originalRequest.source,
-                speech: responses.disponibilidad.text[1]
-            },
-            {
-                "type": 3,
-                "platform": request.body.originalRequest.source,
-                "imageUrl": responses.disponibilidad.media
-            },
-            {
-                'type': 2,
-                'platform': request.body.originalRequest.source,
-                'title': responses.disponibilidad.text[2],
-                'replies': [
-                    responses.disponibilidad.quickReply[0],
-                    responses.disponibilidad.quickReply[1],
-                    responses.disponibilidad.quickReply[2],
-                    responses.disponibilidad.quickReply[3]
-                ]
+                platform: request.body.originalDetectIntentRequest.payload.source.toUpperCase(),
+                quickReplies: {
+                    title: responses.disponibilidad.text[2],
+                    quickReplies: [
+                        responses.disponibilidad.quickReply[0],
+                        responses.disponibilidad.quickReply[1],
+                        responses.disponibilidad.quickReply[2],
+                        responses.disponibilidad.quickReply[3]
+                    ]
+                }
             }
         ]
     };
