@@ -136,5 +136,107 @@
             "Experiencia de Camilo",
             "¿Cuales son los hobbies de Camilo?"
         ]
+    },
+    "estudio": {
+        "text": [
+            "Camilo es en la actualidad egresado de Ingeniería en Ejecución en Computación e Informática en la Universidad de Santiago de Chile, egresado desde 2013.",
+            "Además es tecnólogo en Telecomunicaciones con grado académico de Bachiller en Tecnología de la Universidad de Santiago de Chile, titulado desde el 2005."
+        ],
+        "quickReply": [
+            "¿Donde vive Camilo?",
+            "¿Que idiomas habla?",
+            "Experiencia de Camilo",
+            "¿Cuales son los hobbies de Camilo?"
+        ]
+    },
+    "experiencia": {
+        "text": [
+            "Sin entrar en detalles, te contaré sobre la experiencia de Camilo.",
+            "Es egresado de Ingeniería en Ejecución en Computación e Informática, estudió en la Universidad de Santiago de Chile, y que se ha desempeñado laboralmente en el ámbito del desarrollo de software.",
+            "Cuenta con especial interés en el desarrollo de software, sin embargo tiene experiencia en gestión de proyectos y en metodologías ágiles.",
+            "Cuenta, además, con experiencia laboral en administración de plataformas Linux y Windows, equipos de telecomunicaciones y equipos de seguridad informática. Agrega a su formación el estar titulado de Tecnólogo en Telecomunicaciones en la Universidad de Santiago de Chile.",
+            "Algo mas que desees saber $cv.nombreUsuario?"
+        ],
+        "quickReply": [
+            "¿Donde vive Camilo?",
+            "¿Que idiomas habla?",
+            "Experiencia de Camilo",
+            "¿Cuales son los hobbies de Camilo?"
+        ]
+    },
+    "herramientas": {
+        "text": [
+            "Complementaré la respuesta respondiendo un poco mas sobre la experiencia en lenguajes de programación, herramientas, software y plataformas.",
+            "Plataformas: NGINX, Apache, Docker, Kubernetes, Heroku, Codeship, Logstash, Elasticsearch, Kibana.",
+            "Lenguajes de Programación y Frameworks: C, SQL, Python, ASP, Java, Cobol, Pascal, Visual Basic 6.0, C, PHP, ECMAScript, Microsoft Visual .NET, Codeigniter, AngularJS, Angular 2, Ramda.js, NodeJS.",
+            "Técnicas: TDD, Pomodoro, Pair Programming, Code Review.",
+            "Sistemas operativos: Windows 2000, Windows 2008, RedHat, Fedora, Ubuntu, OpenSuse.",
+            "Metodologías: Agile, Secure Agile Development Lifecycle, OWASP."
+        ],
+        "quickReply": [
+            "¿Donde vive Camilo?",
+            "¿Que idiomas habla?",
+            "Experiencia de Camilo",
+            "¿Cuales son los hobbies de Camilo?"
+        ]
+    },
+    "idiomas": {
+        "text": [
+            "Camilo habla español de forma nativa.",
+            "Adicionalmente con el idioma inglés, puede mantener una conversación un poco fluida, comete errores y su vocabulario no es amplio."
+        ],
+        "quickReply": [
+            "¿Donde vive Camilo?",
+            "¿Que idiomas habla?",
+            "Experiencia de Camilo",
+            "¿Cuales son los hobbies de Camilo?"
+        ]
+    },
+    "pasatiempos": {
+        "text": [
+            "A Camilo le gustan los deportes, en especial el fútbol, tenis de mesa y tenis.",
+            "También tiene un especial interés y gusto por la fotografía."
+        ],
+        "quickReply": [
+            "¿Donde vive Camilo?",
+            "¿Que idiomas habla?",
+            "Experiencia de Camilo",
+            "¿Cuales son los hobbies de Camilo?"
+        ]
+    },
+    "renta": {
+        "text": [
+            "Respecto al salario, y como opinión personal, pienso que quienes ofrecen un puesto de trabajo son quienes deben ofrecer al menos un rango de sueldo acorde al puesto y la experiencia de la persona que requieren para la plaza que necesitan.",
+            "No obstante, este tema es mejor discutirlo directamente y no mediante un robot."
+        ],
+        "quickReply": [
+            "¿Donde vive Camilo?",
+            "¿Que idiomas habla?",
+            "Experiencia de Camilo",
+            "¿Cuales son los hobbies de Camilo?"
+        ]
+    },
+    "rut": {
+        "text": [
+            "El Rol único nacional de Camilo es: 15.649.137-3."
+        ],
+        "quickReply": [
+            "¿Donde vive Camilo?",
+            "¿Que idiomas habla?",
+            "Experiencia de Camilo",
+            "¿Cuales son los hobbies de Camilo?"
+        ]
+    },
+    "tecnologiasTrabajoActual": {
+        "text": [
+            "En Becual ocupamos varias plataformas en la nube, tales como heroku y servicios de amazon, nuestro back-end esta escrito en Node.js y utilizamos salesforce como CRM, el cual esta completamente integrado con nuestro back-end.",
+            "$cv.nombreUsuario puedes revisar mas herramientas de devops, plataformas y aplicaciones que utilizamos en Becual ingresando en el siguiente link https://stackshare.io/becual-com/becual-com"
+        ],
+        "quickReply": [
+            "¿Donde vive Camilo?",
+            "¿Que idiomas habla?",
+            "Experiencia de Camilo",
+            "¿Cuales son los hobbies de Camilo?"
+        ]
     }
 }
