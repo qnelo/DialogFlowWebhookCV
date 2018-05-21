@@ -1,5 +1,3 @@
-'use strict';
-
 const functions = require('firebase-functions');
 const responses = require('./responses.json');
 const replyAdapter = require('./replyAdapter');
@@ -14,8 +12,7 @@ exports.curriculumVitaeResponses = functions.https.onRequest((request, response)
         : 'PLATFORM_UNSPECIFIED';
 
     const context = request.body.queryResult.outputContexts;
-    
-    // console.info(`complete request: ${JSON.stringify(request.body, null, 4)}`);
+
     console.info(`request: {requestSource: ${requestSource}, action: ${action}}`);
 
     // Send response to Dialogflow

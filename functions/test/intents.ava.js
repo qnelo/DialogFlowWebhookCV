@@ -35,7 +35,8 @@ test('Telegram Saludo', t => {
                 platform: request.body.originalDetectIntentRequest.payload.source.toUpperCase(),
                 text: {
                     text: [
-                        'Hola Huachimingo, puedes consultar acerca de la experiencia de Camilo, sus estudios, trabajos o sobre este robot.'                    ]
+                        'Hola Huachimingo, puedes consultar acerca de la experiencia de Camilo, sus estudios, trabajos o sobre este robot.'
+                    ]
                 }
             },
             {

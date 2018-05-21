@@ -1,20 +1,33 @@
 const replaceValues = require('./replaceValues');
 
-const quickRepliesFormatter = (requestSource, responseText, lastText) => {
+/**
+ * Create the object of quickReply
+ * @param {Array} responseText responses
+ * @param {String} lastText Last text from responses as a title of quickReply
+ * @return {Object} QuickReply Object
+ */
+const quickRepliesFormatter = (responseText, lastText) => {
     return {
         title: lastText,
         quickReplies: responseText.quickReply.map(reply => reply)
     };
 };
 
-module.exports = (responseText, requestSource, context) => {
+/**
+ * Adapts the answer to Dialogflow
+ * @param {Object} selectedResponse response object to be adapted
+ * @param {*} requestSource Source of the request
+ * @param {*} context Context dialog
+ * @returns {Object} Adapted response
+ */
+module.exports = (selectedResponse, requestSource, context) => {
 
     let output = {};
     output.fulfillmentText
-        = replaceValues(context, responseText.text[0]);
+        = replaceValues(context, selectedResponse.text[0]);
 
     // TELEGRAM -> Last text must be the title field in quick replys
-    let textArray = Object.create(responseText.text);
+    let textArray = Object.create(selectedResponse.text);
     const lastText = textArray.pop();
 
     output.fulfillmentMessages = [];
@@ -28,8 +41,7 @@ module.exports = (responseText, requestSource, context) => {
     output.fulfillmentMessages.push({
         platform: requestSource,
         quickReplies: quickRepliesFormatter(
-            requestSource,
-            responseText,
+            selectedResponse,
             replaceValues(context, lastText)
         )});
     // console.info(`response:${JSON.stringify(output, null, 4)}`);

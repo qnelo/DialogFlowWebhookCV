@@ -1,7 +1,7 @@
 /**
  * Adapta el objeto de contexto a una estructura de objeto con estructura llave valor plano
- * @param {*} dialogflowContexts Objeto del que se usarán los valores para reemplazar en el texto
- * @param {*} parameters parameters to replace
+ * @param {Object} dialogflowContexts Objeto del que se usarán los valores para reemplazar en el texto
+ * @param {String} parameters parameters to replace
  * @returns {Object} object with parameters to replace
  */
 const objectAdapter = (dialogflowContexts, parameters) => {
