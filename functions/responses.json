@@ -45,7 +45,6 @@
             "Puedes consultar por otros trabajos que ha tenido Camilo presionando los botones de preguntas rápidas de abajo."
         ],
         "quickReply": [
-            "kuCloud",
             "AS Consultores",
             "Service Group",
             "Workmate"
@@ -83,7 +82,7 @@
         ],
         "quickReply": [
             "¿Por qué un chatbot?",
-            "Tecnologías que ocupa un chatbot",
+            "Becual",
             "Experiencia de Camilo"
         ]
     },
@@ -96,8 +95,7 @@
         "quickReply": [
             "¿Donde vive Camilo?",
             "¿Que edad tiene Camilo?",
-            "Experiencia de Camilo",
-            "¿Cuales son los hobbies de Camilo?"
+            "Experiencia de Camilo"
         ]
     },
     "disponibilidad": {
@@ -108,10 +106,9 @@
         ],
         "media": "https://media.giphy.com/media/XIqCQx02E1U9W/giphy.gif",
         "quickReply": [
-            "¿Donde vive Camilo?",
-            "¿Que edad tiene Camilo?",
+            "Disponibilidad para viajes",
             "Experiencia de Camilo",
-            "¿Cuales son los hobbies de Camilo?"
+            "Becual"
         ]
     },
     "edad": {
@@ -121,9 +118,8 @@
         ],
         "quickReply": [
             "¿Donde vive Camilo?",
-            "¿Que idiomas habla?",
             "Experiencia de Camilo",
-            "¿Cuales son los hobbies de Camilo?"
+            "Disponibilidad"
         ]
     },
     "estadoCivil": {
@@ -133,8 +129,7 @@
         "quickReply": [
             "¿Donde vive Camilo?",
             "¿Que idiomas habla?",
-            "Experiencia de Camilo",
-            "¿Cuales son los hobbies de Camilo?"
+            "Contacto"
         ]
     },
     "estudio": {
@@ -143,8 +138,7 @@
             "Además es tecnólogo en Telecomunicaciones con grado académico de Bachiller en Tecnología de la Universidad de Santiago de Chile, titulado desde el 2005."
         ],
         "quickReply": [
-            "¿Donde vive Camilo?",
-            "¿Que idiomas habla?",
+            "¿Donde trabaja Camilo?",
             "Experiencia de Camilo",
             "¿Cuales son los hobbies de Camilo?"
         ]
@@ -158,9 +152,7 @@
             "Algo mas que desees saber $cv.nombreUsuario?"
         ],
         "quickReply": [
-            "¿Donde vive Camilo?",
-            "¿Que idiomas habla?",
-            "Experiencia de Camilo",
+            "Becual",
             "¿Cuales son los hobbies de Camilo?"
         ]
     },
@@ -175,7 +167,6 @@
         ],
         "quickReply": [
             "¿Donde vive Camilo?",
-            "¿Que idiomas habla?",
             "Experiencia de Camilo",
             "¿Cuales son los hobbies de Camilo?"
         ]
@@ -186,20 +177,19 @@
             "Adicionalmente con el idioma inglés, puede mantener una conversación un poco fluida, comete errores y su vocabulario no es amplio."
         ],
         "quickReply": [
-            "¿Donde vive Camilo?",
-            "¿Que idiomas habla?",
+            "Que es un chatbot?",
             "Experiencia de Camilo",
-            "¿Cuales son los hobbies de Camilo?"
+            "Beucal"
         ]
     },
     "pasatiempos": {
         "text": [
             "A Camilo le gustan los deportes, en especial el fútbol, tenis de mesa y tenis.",
-            "También tiene un especial interés y gusto por la fotografía."
+            "También tiene un especial interés y gusto por la fotografía.",
+            "Puedes revisar algunas de sus fotos que tiene en flickr en la siguiente URL: https://www.flickr.com/photos/_kmilo_/"
         ],
         "quickReply": [
-            "¿Donde vive Camilo?",
-            "¿Que idiomas habla?",
+            "¿Que es un chatbot?",
             "Experiencia de Camilo",
             "¿Cuales son los hobbies de Camilo?"
         ]
@@ -211,7 +201,6 @@
         ],
         "quickReply": [
             "¿Donde vive Camilo?",
-            "¿Que idiomas habla?",
             "Experiencia de Camilo",
             "¿Cuales son los hobbies de Camilo?"
         ]
@@ -222,7 +211,6 @@
         ],
         "quickReply": [
             "¿Donde vive Camilo?",
-            "¿Que idiomas habla?",
             "Experiencia de Camilo",
             "¿Cuales son los hobbies de Camilo?"
         ]
@@ -233,10 +221,110 @@
             "$cv.nombreUsuario puedes revisar mas herramientas de devops, plataformas y aplicaciones que utilizamos en Becual ingresando en el siguiente link https://stackshare.io/becual-com/becual-com"
         ],
         "quickReply": [
+            "¿Que es un chatbot?",
+            "Estado civil",
+            "Herramientas"
+        ]
+    },
+    "telefono": {
+        "text": [
+            "$cv.nombreUsuario, por motivos de seguridad prefiero no darte el número de teléfono.",
+            "Sin embargo puedes contactarlo enviándole un correo electrónico a la casilla camilo.henriquez.mena@gmail.com",
+            "O escribiéndole en su linkedin https://www.linkedin.com/in/camilohenriquezmena/"
+        ],
+        "quickReply": [
             "¿Donde vive Camilo?",
-            "¿Que idiomas habla?",
             "Experiencia de Camilo",
-            "¿Cuales son los hobbies de Camilo?"
+            "¿Donde trabaja Camilo?"
+        ]
+    },
+    "trabajo": {
+        "text": [
+            "Camilo ha tenido varios trabajos, te los cuento desde el mas reciente al mas antiguo",
+            "Agile Senior Full Stack Developer en Becual, desde junio del 2016 a la actualidad",
+            "Analista Funcional en 'As Consultores' desde julio del 2013 hasta marzo del 2016",
+            "Back End Developer en 'Computación Group Service Ltda' desde diciembre del 2012 hasta junio del 2013",
+            "Full Stack Developer en 'Workmate Ltda.' desde el 2011 hasta el 2012",
+            "Full Stack Developer como Independiente entre los años 2010 y 2012",
+            "Desarrollador y Administrador de Plataformas en 'BIGNISS LTDA.' entre los años 2007 y 2010",
+            "Administrador de Plataformas en 'Empresa DRC', Outsourcing para ENTEL S.A. entre los años 2005 y 2006"
+        ],
+        "quickReply": [
+            "AS Consultores",
+            "Service Group",
+            "Workmate"
+        ]
+    },
+    "trabajoActual": {
+        "text": [
+            "Camilo es Agile Senior Full Stack Developer en Becual desde Junio de 2016 hasta la actualidad",
+            "Es miembro del equipo de desarrollo de software ágil que se encarga de la plataforma tecnológica de la empresa, entre las tareas más relevantes que realiza se pueden mencionar:",
+            "Participar en las decisiones de arquitectura de software del resto de los colaboradores, y velar por que se sigan las políticas de arquitectura definidas por la organización.",
+            "Preservar y promover la cultura ágil y velar por el cumplimiento tanto de los principios como de las metodologías ágiles para el desarrollo de los proyectos tecnológicos de la empresa.",
+            "Y realizar las tareas concernientes al revelamiento de datos, análisis, diseño y desarrollo de los diferentes sistemas informáticos.",
+            "$cv.nombreUsuario, puedes saber mas acerca de Becual en su pagina web https://www.becual.com"
+        ],
+        "quickReply": [
+            "AS Consultores",
+            "Service Group",
+            "Workmate"
+        ]
+    },
+    "ubicacion": {
+        "text": [
+            "Camilo vive en la comuna de Santiago, Región Metropolitana, Chile."
+        ],
+        "quickReply": [
+            "Trabajo Actual",
+            "Estudios de Camilo",
+            "¿Que es un chatbot?"
+        ]
+    },
+    "viajes": {
+        "text": [
+            "Camilo esta dispuesto a trabajar en regiones o fuera de Chile."
+        ],
+        "quickReply": [
+            "Trabajo Actual",
+            "¿Donde vive Camilo?",
+            "Estudios de Camilo",
+            "¿Que es un chatbot?"
+        ]
+    },
+    "asAsoc": {
+        "text": [
+            "En AS Consultores, (2013 - 2016) Camilo se desempeñó como gestor de proyectos informáticos para la subgerencia de Administración Aplicaciones y Canales en BancoEstado, encargado de las iniciativas sobre el canal internet de personas naturales, coordina trabajos con proveedores, realiza levantamientos de requerimientos y diseña soluciones.",
+            "Sus principales logros fueron llevar a cabo proyectos de mejoras normativas sobre productos crediticios, de débito y de seguros de la banca en línea, permitiendo cumplir a BancoEstado con los requerimientos de Sernac Financiero y mejorar la experiencia del cliente en línea."
+        ],
+        "quickReply": [
+            "Becual",
+            "Service Group",
+            "Workmate",
+            "Estudios de Camilo"
+        ]
+    },
+    "serviceGroup": {
+        "text": [
+            "En Computación Group Service Ltda. (2012 - 2013) Camilo trabajo como Desarrollador para la subgerencia de Administración Aplicaciones y Canales en BancoEstado, desarrollador en VB 6.0.",
+            "Su principal logro fué desarrollar de una pieza de integración entre plataformas web, destinadas a la atención de clientes de la plataforma web de BancoEstado permitiendo el inicio de sesión en dos plataformas simultáneamente de forma transparente para el usuario con seguridad y alta disponibilidad."
+        ],
+        "quickReply": [
+            "Becual",
+            "AS Consultores",
+            "Workmate",
+            "¿Que es un chatbot?"
+        ]
+    },
+    "workmate": {
+        "text": [
+            "En Workmate Limitada. (2011 - 2012) Desarrollador encargado de la toma de requerimientos de usuario, generar los requerimientos de software, hacer el diseño de las soluciones, modelamiento de bases de datos y codificación de aplicaciones. Las tecnologías utilizadas para el desarrollo de software son Javascript, PHP con el framework de desarrollo Codeigniter y MySQL como DBMS.",
+            "Su principal logro fué programar un sistema de hotelería para empresas del rubro minero, que permite organizar de forma eficiente los distintos tipos de habitaciones existentes en campamentos mineros considerando turnos día, tarde y noche y esquemas de turnos de X días de trabajo con Y días de descanso, incluyendo además reportes de uso, control de acceso y facturación. Con la puesta en marcha se permitió maximizar los recursos disponibles para alojar trabajadores en minera Sierra Gorda y Radomiro Tomic de la Vicepresidente de Operaciones Norte de Codelco."
+        ],
+        "quickReply": [
+            "Becual",
+            "AS Consultores",
+            "Service Group",
+            "Estudios de Camilo"
         ]
     }
 }

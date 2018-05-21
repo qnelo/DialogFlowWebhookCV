@@ -216,8 +216,7 @@ test('Telegram Becual intent', t => {
                     quickReplies: [
                         responses.becual.quickReply[0],
                         responses.becual.quickReply[1],
-                        responses.becual.quickReply[2],
-                        responses.becual.quickReply[3]
+                        responses.becual.quickReply[2]
                     ]
                 }
             }
@@ -263,8 +262,7 @@ test('Telegram disponibilidad intent', t => {
                     quickReplies: [
                         responses.disponibilidad.quickReply[0],
                         responses.disponibilidad.quickReply[1],
-                        responses.disponibilidad.quickReply[2],
-                        responses.disponibilidad.quickReply[3]
+                        responses.disponibilidad.quickReply[2]
                     ]
                 }
             }
