@@ -1,5 +1,9 @@
 const functions = require('firebase-functions');
-const responses = require('./responses.json');
+const admin = require('firebase-admin');
+
+admin.initializeApp(functions.config().firebase);
+const db = admin.firestore();
+
 const replyAdapter = require('./replyAdapter');
 
 exports.curriculumVitaeResponses = functions.https.onRequest((request, response) => {
@@ -16,7 +20,11 @@ exports.curriculumVitaeResponses = functions.https.onRequest((request, response)
     console.info(`request: {requestSource: ${requestSource}, action: ${action}}`);
 
     // Send response to Dialogflow
-    response.json(
-        replyAdapter(responses[action], requestSource, context)
-    );
+    db.collection('responses').doc(action).get()
+            .then(dbResponse => {
+                console.info('dbResponse', dbResponse);
+                response.json(
+                    replyAdapter(dbResponse.data(), requestSource, context)
+                );
+            });
 });

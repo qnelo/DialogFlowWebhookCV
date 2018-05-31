@@ -23,6 +23,7 @@ functions/node_modules
 
 # Optional npm cache directory
 .npm
+yarn.lock
 
 # Visual Studio Code user settings:
 .vscode

@@ -18,9 +18,9 @@
   },
   "dependencies": {
     "actions-on-google": "^1.5.x",
-    "firebase-admin": "^4.2.1",
-    "firebase-functions": "^0.5.7",
-    "apiai": "^4.0.3"
+    "apiai": "^4.0.3",
+    "firebase-admin": "^5.12.1",
+    "firebase-functions": "^1.0.3"
   },
   "devDependencies": {
     "ava": "^0.22.0",
