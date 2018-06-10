@@ -5,20 +5,20 @@
  * @returns {Object} object with parameters to replace
  */
 const objectAdapter = (dialogflowContexts, parameters) => {
-    
+
     let parametersObject = {};
-    
+
     for (const context of dialogflowContexts) {
-        
-        for (const parameter of parameters){
-            
+
+        for (const parameter of parameters) {
+
             const newParameter = parameter.replace('$', '').split('.');
-            
+
             if (context.parameters[newParameter[1]]
                 && context.name.split('/').pop() === newParameter[0]) {
 
                 parametersObject[`$${context.name.split('/').pop()}.${newParameter[1]}`]
-                = context.parameters[newParameter[1]];
+                    = context.parameters[newParameter[1]];
             }
         }
     }
@@ -40,20 +40,20 @@ const replaceValues = (dialogflowContexts, replyText) => {
     if (!parameters || 0 === parameters.lenght) {
         return replyText;
     }
-    
-    let parametersObject = objectAdapter(dialogflowContexts, parameters);
-    
+
+    const parametersObject = objectAdapter(dialogflowContexts, parameters);
+
     let keyValues = {};
     for (let p of parameters) {
         keyValues[p] = parametersObject[p];
     }
-    
+
     let completeText = replyText;
     for (let key of Object.keys(keyValues)) {
         let value = keyValues[key];
         completeText = completeText.replace(key, value);
     }
-    
+
     return completeText;
 };
 
