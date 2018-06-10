@@ -1,10 +1,15 @@
 const test = require('ava');
 const R = require('ramda');
-const newStandartRequest = require('./newStandartRequest.json');
-const responses = require('../responses.json');
-const myFunctions = require('../index');
+const rewire = require('rewire');
 
-test('Telegram Saludo', t => {
+const newStandartRequest = require('./newStandartRequest.json');
+const responses = require('./mock/responses.json');
+let myFunctions = rewire('../index');
+const firebaseMock = require('./mock/firebaseMock');
+
+myFunctions.__set__('db', firebaseMock);
+
+test.cb('Telegram Saludo', t => {
 
     // Arrange
     let request = R.clone(newStandartRequest);
@@ -12,7 +17,7 @@ test('Telegram Saludo', t => {
     request.body.originalDetectIntentRequest.payload.source = 'telegram';
     request.body.queryResult.outputContexts = [
         {
-            name: 'projects/newagent-86de9/agent/sessions/0a7124e9-8a0b-45a8-b7ef-035452978583/contexts/cv',
+            name: 'projects/newagent-86de9/agent/sessions/asdf/contexts/cv',
             lifespanCount: 5,
             parameters: {
                 nombreUsuario: 'Huachimingo',
@@ -20,7 +25,7 @@ test('Telegram Saludo', t => {
             }
         },
         {
-            name: 'projects/newagent-86de9/agent/sessions/0a7124e9-8a0b-45a8-b7ef-035452978583/contexts/saludo',
+            name: 'projects/newagent-86de9/agent/sessions/asdf/contexts/saludo',
             parameters: {
                 nombreUsuario: 'Huachimingo',
                 'nombreUsuario.original': 'Huachimingo'
@@ -29,13 +34,13 @@ test('Telegram Saludo', t => {
     ];
 
     const expectedResponse = {
-        fulfillmentText: 'Hola Huachimingo, puedes consultar acerca de la experiencia de Camilo, sus estudios, trabajos o sobre este robot.',
+        fulfillmentText: 'Hola Huachimingo, puedes consultar acerca de la experiencia de Camilo.',
         fulfillmentMessages: [
             {
                 platform: request.body.originalDetectIntentRequest.payload.source.toUpperCase(),
                 text: {
                     text: [
-                        'Hola Huachimingo, puedes consultar acerca de la experiencia de Camilo, sus estudios, trabajos o sobre este robot.'
+                        'Hola Huachimingo, puedes consultar acerca de la experiencia de Camilo.'
                     ]
                 }
             },
@@ -59,6 +64,7 @@ test('Telegram Saludo', t => {
             // Assert
             t.deepEqual(objectResponse.data, expectedResponse.data);
             t.deepEqual(objectResponse, expectedResponse);
+            t.end();
         }
     };
 
@@ -67,7 +73,7 @@ test('Telegram Saludo', t => {
 
 });
 
-test('Telegram default intent', t => {
+test.cb('Telegram default intent', t => {
 
     // Arrange
     let request = R.clone(newStandartRequest);
@@ -98,6 +104,7 @@ test('Telegram default intent', t => {
             // Assert
             t.deepEqual(objectResponse.data, expectedResponse.data);
             t.deepEqual(objectResponse, expectedResponse);
+            t.end();
         }
     };
 
@@ -106,7 +113,7 @@ test('Telegram default intent', t => {
 
 });
 
-test('Default intent with undefined request source', t => {
+test.cb('Default intent with undefined request source', t => {
 
     // Arrange
     let request = R.clone(newStandartRequest);
@@ -137,6 +144,7 @@ test('Default intent with undefined request source', t => {
             // Assert
             t.deepEqual(objectResponse.data, expectedResponse.data);
             t.deepEqual(objectResponse, expectedResponse);
+            t.end();
         }
     };
 
@@ -145,7 +153,7 @@ test('Default intent with undefined request source', t => {
 
 });
 
-test('Telegram anoExperiencia intent', t => {
+test.cb('Telegram anoExperiencia intent', t => {
 
     // Arrange
     let request = R.clone(newStandartRequest);
@@ -181,6 +189,7 @@ test('Telegram anoExperiencia intent', t => {
             // Assert
             t.deepEqual(objectResponse.data, expectedResponse.data);
             t.deepEqual(objectResponse, expectedResponse);
+            t.end();
         }
     };
 
@@ -189,7 +198,7 @@ test('Telegram anoExperiencia intent', t => {
 
 });
 
-test('Telegram Becual intent', t => {
+test.cb('Telegram Becual intent', t => {
 
     // Arrange
     let request = R.clone(newStandartRequest);
@@ -228,6 +237,7 @@ test('Telegram Becual intent', t => {
             // Assert
             t.deepEqual(objectResponse.data, expectedResponse.data);
             t.deepEqual(objectResponse, expectedResponse);
+            t.end();
         }
     };
 
@@ -236,7 +246,7 @@ test('Telegram Becual intent', t => {
 
 });
 
-test('Telegram disponibilidad intent', t => {
+test.cb('Telegram disponibilidad intent', t => {
 
     // Arrange
     let request = R.clone(newStandartRequest);
@@ -274,6 +284,7 @@ test('Telegram disponibilidad intent', t => {
             // Assert
             t.deepEqual(objectResponse.data, expectedResponse.data);
             t.deepEqual(objectResponse, expectedResponse);
+            t.end();
         }
     };
 

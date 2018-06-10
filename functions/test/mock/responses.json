@@ -10,7 +10,7 @@
     },
     "saludo": {
         "text": [
-            "Hola $cv.nombreUsuario, puedes consultar acerca de la experiencia de Camilo, sus estudios, trabajos o sobre este robot.",
+            "Hola $cv.nombreUsuario, puedes consultar acerca de la experiencia de Camilo.",
             "Adicionalmente puedes ocupar los botones de preguntas rápidas que aparecen al presionar el icono de botones de telegram."
         ],
         "quickReply": [

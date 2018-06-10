@@ -21,10 +21,9 @@ exports.curriculumVitaeResponses = functions.https.onRequest((request, response)
 
     // Send response to Dialogflow
     db.collection('responses').doc(action).get()
-            .then(dbResponse => {
-                console.info('dbResponse', dbResponse);
-                response.json(
-                    replyAdapter(dbResponse.data(), requestSource, context)
-                );
-            });
+        .then(dbResponse => {
+            response.json(
+                replyAdapter(dbResponse.data(), requestSource, context)
+            );
+        });
 });

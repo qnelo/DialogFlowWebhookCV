@@ -8,14 +8,15 @@ const objectAdapter = (dialogflowContexts, parameters) => {
     
     let parametersObject = {};
     
-    for (let context of dialogflowContexts) {
+    for (const context of dialogflowContexts) {
         
-        for (let parameter of parameters){
+        for (const parameter of parameters){
             
-            let newParameter = parameter.replace('$', '').split('.');
+            const newParameter = parameter.replace('$', '').split('.');
             
             if (context.parameters[newParameter[1]]
-            && context.name.split('/').pop() === newParameter[0]) {
+                && context.name.split('/').pop() === newParameter[0]) {
+
                 parametersObject[`$${context.name.split('/').pop()}.${newParameter[1]}`]
                 = context.parameters[newParameter[1]];
             }
@@ -32,7 +33,7 @@ const objectAdapter = (dialogflowContexts, parameters) => {
  * @returns {String} retorna el texto con los valores reemplazados  por los valores de los objetos
  */
 const replaceValues = (dialogflowContexts, replyText) => {
-    
+
     const parameters = replyText.match(/[$]+(\w{2,}.\w{2,})/g);
 
     // If no parameters to replace, return text
