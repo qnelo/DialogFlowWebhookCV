@@ -25,8 +25,9 @@ exports.curriculumVitaeResponses = functions.https.onRequest((request, firebaseR
 
     ft.getResponse(action)
         .then(firestoreResponse => {
+            console.info('firestoreResponse', firestoreResponse);
             firebaseResponse.json(
-                replyAdapter(firestoreResponse.data(), requestSource, context)
+                replyAdapter(firestoreResponse, requestSource, context)
             );
         });
 });
