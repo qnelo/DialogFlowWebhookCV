@@ -1,5 +1,5 @@
 const test = require('ava');
-const replyAdapter = require('../replyAdapter');
+const replyAdapter = require('../src/replyAdapter');
 
 test.skip('telegram replyAdapter with media', t => {
 

@@ -1,5 +1,5 @@
 import test from 'ava';
-let replace = require('../replaceValues');
+let replace = require('../src/replaceValues');
 
 test('replaceValue Test with parameters and object', (t) => {
 

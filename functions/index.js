@@ -1,12 +1,13 @@
 const functions = require('firebase-functions');
-const admin = require('firebase-admin');
+// const admin = require('firebase-admin');
 
-admin.initializeApp(functions.config().firebase);
-const db = admin.firestore();
+// admin.initializeApp(functions.config().firebase);
+// const db = admin.firestore();
 
-const replyAdapter = require('./replyAdapter');
+const replyAdapter = require('./src/replyAdapter');
+const firestore = require('./src/firestore');
 
-exports.curriculumVitaeResponses = functions.https.onRequest((request, response) => {
+exports.curriculumVitaeResponses = functions.https.onRequest((request, firebaseResponse) => {
 
     const action = (request.body.queryResult.action)
         ? request.body.queryResult.action : 'default';
@@ -19,11 +20,13 @@ exports.curriculumVitaeResponses = functions.https.onRequest((request, response)
 
     console.info(`request: {requestSource: ${requestSource}, action: ${action}}`);
 
-    // Send response to Dialogflow
-    db.collection('responses').doc(action).get()
-        .then(dbResponse => {
-            response.json(
-                replyAdapter(dbResponse.data(), requestSource, context)
+    const ft = firestore(functions);
+    console.info('firestore', ft.getResponse);
+
+    ft.getResponse(action)
+        .then(firestoreResponse => {
+            firebaseResponse.json(
+                replyAdapter(firestoreResponse.data(), requestSource, context)
             );
         });
 });
