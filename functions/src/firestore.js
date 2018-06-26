@@ -6,11 +6,7 @@ const getResponse = db => action => {
         });
 };
 
-module.exports = functions => {
-
-    const admin = require('firebase-admin');
-    admin.initializeApp(functions.config().firebase);
-    const db = admin.firestore();
+module.exports = db => {
 
     return {
         getResponse: getResponse(db)

@@ -1,11 +1,11 @@
 const functions = require('firebase-functions');
-// const admin = require('firebase-admin');
-
-// admin.initializeApp(functions.config().firebase);
-// const db = admin.firestore();
+const admin = require('firebase-admin');
 
 const replyAdapter = require('./src/replyAdapter');
 const firestore = require('./src/firestore');
+
+admin.initializeApp(functions.config().firebase);
+const db = admin.firestore();
 
 exports.curriculumVitaeResponses = functions.https.onRequest((request, firebaseResponse) => {
 
@@ -20,12 +20,8 @@ exports.curriculumVitaeResponses = functions.https.onRequest((request, firebaseR
 
     console.info(`request: {requestSource: ${requestSource}, action: ${action}}`);
 
-    const ft = firestore(functions);
-    console.info('firestore', ft.getResponse);
-
-    ft.getResponse(action)
+    firestore(db).getResponse(action)
         .then(firestoreResponse => {
-            console.info('firestoreResponse', firestoreResponse);
             firebaseResponse.json(
                 replyAdapter(firestoreResponse, requestSource, context)
             );

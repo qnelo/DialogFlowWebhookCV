@@ -5,11 +5,10 @@ const rewire = require('rewire');
 const newStandartRequest = require('./newStandartRequest.json');
 const responses = require('./mock/responses.json');
 let myFunctions = rewire('../index');
-let firestore = rewire('../src/firestore');
-const firebaseMock = require('./mock/firebaseMock');
 
-firestore.__set__('db', firebaseMock);
-myFunctions.__set__('firestore', firestore);
+const db = require('./mock/firebaseMock');
+
+myFunctions.__set__('db', db);
 
 test.cb('Telegram Saludo', t => {
 
