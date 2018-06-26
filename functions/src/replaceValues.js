@@ -1,8 +1,8 @@
 /**
- * Adapta el objeto de contexto a una estructura de objeto con estructura llave valor plano
- * @param {Object} dialogflowContexts Objeto del que se usarán los valores para reemplazar en el texto
- * @param {String} parameters parameters to replace
- * @returns {Object} object with parameters to replace
+ * Adapt the context to a value key object structure
+ * @param {object} dialogflowContexts Object with the contexts that will be replaced in the response
+ * @param {string} parameters parameters to replace
+ * @returns {object} object with parameters to replace
  */
 const objectAdapter = (dialogflowContexts, parameters) => {
 
@@ -26,11 +26,10 @@ const objectAdapter = (dialogflowContexts, parameters) => {
 };
 
 /**
- * Reemplaza los valores en un string entregado por los valores de atributos del objeto entregado
- * @param {Object} dialogflowContexts Objeto del que se usarán los valores para reemplazar en el texto
- * @param {String} replyText Texto en el cual se quieren reempazar los parametros que inician con '$'
- * por params de object
- * @returns {String} retorna el texto con los valores reemplazados  por los valores de los objetos
+ * Replaces the values in a string delivered by the attribute values of the delivered object
+ * @param {object} dialogflowContexts Object with the contexts that will be replaced in the response
+ * @param {string} replyText Text in which the parameters that start with '$' will be replaced
+ * @returns {string} Response with the values replaced
  */
 const replaceValues = (dialogflowContexts, replyText) => {
 
