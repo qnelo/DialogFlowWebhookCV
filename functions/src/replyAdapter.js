@@ -2,9 +2,9 @@ const replaceValues = require('./replaceValues');
 
 /**
  * Create the object of quickReply
- * @param {Array} responseText responses
- * @param {String} lastText Last text from responses as a title of quickReply
- * @return {Object} QuickReply Object
+ * @param {array} responseText responses
+ * @param {string} lastText Last text from responses as a title of quickReply
+ * @return {object} QuickReply Object
  */
 const quickRepliesFormatter = (responseText, lastText) => {
     return {
@@ -15,10 +15,10 @@ const quickRepliesFormatter = (responseText, lastText) => {
 
 /**
  * Adapts the answer to Dialogflow
- * @param {Object} selectedResponse response object to be adapted
- * @param {*} requestSource Source of the request
- * @param {*} context Context dialog
- * @returns {Object} Adapted response
+ * @param {object} selectedResponse response object to be adapted
+ * @param {string} requestSource Source of the request
+ * @param {object} context Context dialog
+ * @returns {object} Adapted response
  */
 module.exports = (selectedResponse, requestSource, context) => {
 
@@ -44,6 +44,5 @@ module.exports = (selectedResponse, requestSource, context) => {
             selectedResponse,
             replaceValues(context, lastText)
         )});
-    // console.info(`response:${JSON.stringify(output, null, 4)}`);
     return output;
 };
