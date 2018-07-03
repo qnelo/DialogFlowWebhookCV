@@ -34,3 +34,6 @@ typings
 
 # Environment variables
 .env
+
+# GCP test credential
+credential.json

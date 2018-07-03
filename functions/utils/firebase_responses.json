@@ -1,0 +1,341 @@
+{
+    "anoExperiencia": {
+        "text": [
+            "Camilo tiene 12 años de experiencia trabajando en distintas empresas del sector tecnológico, de los cuales, los últimos 8 años tienen relación con el desarrollo de software."
+        ],
+        "quickReply": [
+            "Último Trabajo de Camilo",
+            "Estudios de Camilo",
+            "¿Donde vive Camilo?",
+            "¿Que es un chatbot?"
+        ]
+    },
+    "asAsoc": {
+        "text": [
+            "En AS Consultores, (2013 - 2016) Camilo se desempeñó como gestor de proyectos informáticos para la subgerencia de Administración Aplicaciones y Canales en BancoEstado, encargado de las iniciativas sobre el canal internet de personas naturales, coordina trabajos con proveedores, realiza levantamientos de requerimientos y diseña soluciones.",
+            "Sus principales logros fueron llevar a cabo proyectos de mejoras normativas sobre productos crediticios, de débito y de seguros de la banca en línea, permitiendo cumplir a BancoEstado con los requerimientos de Sernac Financiero y mejorar la experiencia del cliente en línea."
+        ],
+        "quickReply": [
+            "Becual",
+            "Service Group",
+            "Workmate",
+            "Estudios de Camilo"
+        ]
+    },
+    "becual": {
+        "quickReply": [
+            "AS Consultores",
+            "Service Group",
+            "Workmate"
+        ],
+        "text": [
+            "Becual es una empresa que busca conectar eficientemente, apalancados en la tecnología, a las empresas pyme con financiamientos y créditos, de manera que pudieran acceder en menores tiempos y en mejores condiciones",
+            "En otras palabras Becual es una plataforma de crowdfunding, que se orienta al área de préstamos",
+            "Las personas que tienen dinero se conectan de manera directa, con pequeñas y medianas empresas que necesitan financiamiento. El resultado es que las personas ganan más por sus inversiones y las empresas finalmente pagan menos por sus créditos.",
+            "Puedes consultar por otros trabajos que ha tenido Camilo presionando los botones de preguntas rápidas de abajo."
+        ]
+    },
+    "cerveza": {
+        "text": [
+            "A camilo le gustan las cervezas artesanales",
+            "De las cervezas comerciales, su preferida es la Austral Calafate"
+        ],
+        "quickReply": [
+            "Pasatiempos",
+            "Donde vive",
+            "Estudios de Camilo"
+        ]
+    },
+    "chatbot": {
+        "text": [
+            "Un Chatbot es un robot cuyo objetivo es simular la conversación con una persona.",
+            "En específico, la función de este chatbot es entregar información sobre el curriculum vitae de Camilo."
+        ],
+        "quickReply": [
+            "¿Por qué un chatbot?",
+            "Tecnologías que ocupa un chatbot"
+        ]
+    },
+    "chatbotObjetivo": {
+        "text": [
+            "Este chatbot nació en Octubre de 2017 para lograr varios objetivos.",
+            "El primero es interiorizarse en las tecnologías detrás de las interfaces conversacionales que ocupan machine learning para el reconocimiento de intenciones de expresadas textualmente o verbalmente.",
+            "El segundo objetivo es trabajar con tecnologías de Google como DialogFlow y Firebase entre otras.",
+            "El tercer objetivo es mostrar una alternativa tecnológica que cuente sobre mi experiencia laboral en áreas de la informática."
+        ],
+        "quickReply": [
+            "Que es un chatbot?",
+            "Tecnologías que ocupa un chatbot",
+            "Experiencia de Camilo"
+        ]
+    },
+    "contacto": {
+        "text": [
+            "Puedes contactar a Camilo enviando un correo a",
+            "camilo.henriquez.mena@gmail.com",
+            "O mediante un mensaje a su linkedin en https://www.linkedin.com/in/camilohenriquezmena/"
+        ],
+        "quickReply": [
+            "¿Donde vive Camilo?",
+            "¿Que edad tiene Camilo?",
+            "Experiencia de Camilo"
+        ]
+    },
+    "default": {
+        "text": [
+            "default"
+        ],
+        "quickReply": []
+    },
+    "disponibilidad": {
+        "text": [
+            "En estos momentos Camilo no está en búsqueda de nuevos desafíos, está muy comprometido con su actual rol.",
+            "De todas maneras puedes contactar a Camilo para hablar de algún proyecto mediante un correo electrónico en camilo.henriquez.mena@gmail.com",
+            "O mediante un mensaje a su linkedin en https://www.linkedin.com/in/camilohenriquezmena/"
+        ],
+        "media": "https://media.giphy.com/media/XIqCQx02E1U9W/giphy.gif",
+        "quickReply": [
+            "Disponibilidad para viajes",
+            "Experiencia de Camilo",
+            "Becual"
+        ]
+    },
+    "edad": {
+        "quickReply": [
+            "¿Donde vive Camilo?",
+            "Experiencia de Camilo",
+            "Disponibilidad"
+        ],
+        "text": [
+            "Camilo tiene 35 años de edad.",
+            "Nació el 12 de julio de 1983."
+        ]
+    },
+    "estadoCivil": {
+        "text": [
+            "El estado civil de Camilo es soltero, mas no por eso está solo, tiene novia desde hace 4 años."
+        ],
+        "quickReply": [
+            "¿Donde vive Camilo?",
+            "¿Que idiomas habla?",
+            "Contacto"
+        ]
+    },
+    "estudio": {
+        "quickReply": [
+            "¿Donde trabaja Camilo?",
+            "Experiencia de Camilo",
+            "¿Cuales son los hobbies de Camilo?"
+        ],
+        "text": [
+            "Camilo es en la actualidad egresado de Ingeniería en Ejecución en Computación e Informática en la Universidad de Santiago de Chile, egresado desde 2013.",
+            "Además es tecnólogo en Telecomunicaciones con grado académico de Bachiller en Tecnología de la Universidad de Santiago de Chile, titulado desde el 2005."
+        ]
+    },
+    "experiencia": {
+        "text": [
+            "Sin entrar en detalles, te contaré sobre la experiencia de Camilo.",
+            "Es egresado de Ingeniería en Ejecución en Computación e Informática, estudió en la Universidad de Santiago de Chile, y que se ha desempeñado laboralmente en el ámbito del desarrollo de software.",
+            "Cuenta con especial interés en el desarrollo de software, sin embargo tiene experiencia en gestión de proyectos y en metodologías ágiles.",
+            "Cuenta, además, con experiencia laboral en administración de plataformas Linux y Windows, equipos de telecomunicaciones y equipos de seguridad informática. Agrega a su formación el estar titulado de Tecnólogo en Telecomunicaciones en la Universidad de Santiago de Chile.",
+            "Algo mas que desees saber $cv.nombreUsuario?"
+        ],
+        "quickReply": [
+            "Becual",
+            "¿Cuales son los hobbies de Camilo?"
+        ]
+    },
+    "herramientas": {
+        "text": [
+            "Complementaré la respuesta respondiendo un poco mas sobre la experiencia en lenguajes de programación, herramientas, software y plataformas.",
+            "Plataformas: NGINX, Apache, Docker, Kubernetes, Heroku, Codeship, Logstash, Elasticsearch, Kibana.",
+            "Lenguajes de Programación y Frameworks: C, SQL, Python, ASP, Java, Cobol, Pascal, Visual Basic 6.0, C, PHP, ECMAScript, Microsoft Visual .NET, Codeigniter, AngularJS, Angular 2, Ramda.js, NodeJS.",
+            "Técnicas: TDD, Pomodoro, Pair Programming, Code Review.",
+            "Sistemas operativos: Windows 2000, Windows 2008, RedHat, Fedora, Ubuntu, OpenSuse.",
+            "Metodologías: Agile, Secure Agile Development Lifecycle, OWASP."
+        ],
+        "quickReply": [
+            "¿Donde vive Camilo?",
+            "Experiencia de Camilo",
+            "¿Cuales son los hobbies de Camilo?"
+        ]
+    },
+    "idiomas": {
+        "text": [
+            "Camilo habla español de forma nativa.",
+            "Adicionalmente con el idioma inglés, puede mantener una conversación un poco fluida, comete errores y su vocabulario no es amplio."
+        ],
+        "quickReply": [
+            "Que es un chatbot?",
+            "Experiencia de Camilo",
+            "Beucal"
+        ]
+    },
+    "input.welcome": {
+        "text": [
+            "¡Hola! Soy el chatbot curriculum vitae de Camilo Henríquez. Conmigo puedes consultar sobre la experiencia profesional de mi creador.",
+            "\"Tengo pocos meses de edad, por lo tanto es probable que no pueda ayudarte todo lo bien que quisiera, pero día a día y cada vez que hablo adquiero más experiencia, ya que estoy bajo entrenamiento.",
+            "Pero antes de empezar a conversar, dime como te llamas",
+            ":)"
+        ],
+        "quickReply": []
+    },
+    "pasatiempos": {
+        "text": [
+            "A Camilo le gustan los deportes, en especial el fútbol, tenis de mesa y tenis.",
+            "También tiene un especial interés y gusto por la fotografía.",
+            "Puedes revisar algunas de sus fotos que tiene en flickr en la siguiente URL: https://www.flickr.com/photos/_kmilo_/"
+        ],
+        "quickReply": [
+            "¿Que es un chatbot?",
+            "Experiencia de Camilo",
+            "¿Cuales son los hobbies de Camilo?"
+        ]
+    },
+    "renta": {
+        "text": [
+            "Respecto al salario, y como opinión personal, pienso que quienes ofrecen un puesto de trabajo son quienes deben ofrecer al menos un rango de sueldo acorde al puesto y la experiencia de la persona que requieren para la plaza que necesitan.",
+            "No obstante, este tema es mejor discutirlo directamente y no mediante un robot."
+        ],
+        "quickReply": [
+            "¿Donde vive Camilo?",
+            "Experiencia de Camilo",
+            "¿Cuales son los hobbies de Camilo?"
+        ]
+    },
+    "rut": {
+        "text": [
+            "El Rol único nacional de Camilo es: 15.649.137-3."
+        ],
+        "quickReply": [
+            "¿Donde vive Camilo?",
+            "Experiencia de Camilo",
+            "¿Cuales son los hobbies de Camilo?"
+        ]
+    },
+    "saludo": {
+        "quickReply": [
+            "Trabajo Actual",
+            "Estudios de Camilo",
+            "¿Donde vive?",
+            "¿Que es un chatbot?"
+        ],
+        "text": [
+            "Hola $cv.nombreUsuario, puedes consultar acerca de la experiencia de Camilo, sus estudios, trabajos o sobre este robot.",
+            "Adicionalmente puedes ocupar los botones de preguntas rápidas que aparecen al presionar el icono de botones de telegram."
+        ]
+    },
+    "serviceGroup": {
+        "text": [
+            "En Computación Group Service Ltda. (2012 - 2013) Camilo trabajo como Desarrollador para la subgerencia de Administración Aplicaciones y Canales en BancoEstado, desarrollador en VB 6.0.",
+            "Su principal logro fué desarrollar de una pieza de integración entre plataformas web, destinadas a la atención de clientes de la plataforma web de BancoEstado permitiendo el inicio de sesión en dos plataformas simultáneamente de forma transparente para el usuario con seguridad y alta disponibilidad."
+        ],
+        "quickReply": [
+            "Becual",
+            "AS Consultores",
+            "Workmate",
+            "¿Que es un chatbot?"
+        ]
+    },
+    "tecnologiaChatbot": {
+        "text": [
+            "Detrás de este chatbot se encuentran varias tecnologías implicadas, las dos más importantes que caben destacar son:",
+            "DialogFlow (http://dialogflow.com), la cual permite crear interfaces conversacionales e integrarse con varias plataformas como telegram, slack, facebook, etc.",
+            "Google Firebase es utilizada para alojar las funciones javascript que realizan el procesamiento de las intenciones detectadas por Dialogflow y entregar la respuesta adecuada a cada una de las preguntas realizadas al chatbot.",
+            "Pueden ver las funciones en el siguiente repositorio git de Camilo: https://github.com/qnelo/DialogFlowWebhookCV"
+        ],
+        "quickReply": [
+            "¿Por qué un chatbot?",
+            "Becual",
+            "Experiencia de Camilo"
+        ]
+    },
+    "tecnologiasTrabajoActual": {
+        "text": [
+            "En Becual ocupamos varias plataformas en la nube, tales como heroku y servicios de amazon, nuestro back-end esta escrito en Node.js y utilizamos salesforce como CRM, el cual esta completamente integrado con nuestro back-end.",
+            "$cv.nombreUsuario puedes revisar mas herramientas de devops, plataformas y aplicaciones que utilizamos en Becual ingresando en el siguiente link https://stackshare.io/becual-com/becual-com"
+        ],
+        "quickReply": [
+            "¿Que es un chatbot?",
+            "Estado civil",
+            "Herramientas"
+        ]
+    },
+    "telefono": {
+        "text": [
+            "$cv.nombreUsuario, por motivos de seguridad prefiero no darte el número de teléfono.",
+            "Sin embargo puedes contactarlo enviándole un correo electrónico a la casilla camilo.henriquez.mena@gmail.com",
+            "O escribiéndole en su linkedin https://www.linkedin.com/in/camilohenriquezmena/"
+        ],
+        "quickReply": [
+            "¿Donde vive Camilo?",
+            "Experiencia de Camilo",
+            "¿Donde trabaja Camilo?"
+        ]
+    },
+    "trabajo": {
+        "text": [
+            "Camilo ha tenido varios trabajos, te los cuento desde el mas reciente al mas antiguo",
+            "Agile Senior Full Stack Developer en Becual, desde junio del 2016 a la actualidad",
+            "Analista Funcional en 'As Consultores' desde julio del 2013 hasta marzo del 2016",
+            "Back End Developer en 'Computación Group Service Ltda' desde diciembre del 2012 hasta junio del 2013",
+            "Full Stack Developer en 'Workmate Ltda.' desde el 2011 hasta el 2012",
+            "Full Stack Developer como Independiente entre los años 2010 y 2012",
+            "Desarrollador y Administrador de Plataformas en 'BIGNISS LTDA.' entre los años 2007 y 2010",
+            "Administrador de Plataformas en 'Empresa DRC', Outsourcing para ENTEL S.A. entre los años 2005 y 2006"
+        ],
+        "quickReply": [
+            "AS Consultores",
+            "Service Group",
+            "Workmate"
+        ]
+    },
+    "trabajoActual": {
+        "text": [
+            "Camilo es Agile Senior Full Stack Developer en Becual desde Junio de 2016 hasta la actualidad",
+            "Es miembro del equipo de desarrollo de software ágil que se encarga de la plataforma tecnológica de la empresa, entre las tareas más relevantes que realiza se pueden mencionar:",
+            "Participar en las decisiones de arquitectura de software del resto de los colaboradores, y velar por que se sigan las políticas de arquitectura definidas por la organización.",
+            "Preservar y promover la cultura ágil y velar por el cumplimiento tanto de los principios como de las metodologías ágiles para el desarrollo de los proyectos tecnológicos de la empresa.",
+            "Y realizar las tareas concernientes al revelamiento de datos, análisis, diseño y desarrollo de los diferentes sistemas informáticos.",
+            "$cv.nombreUsuario, puedes saber mas acerca de Becual en su pagina web https://www.becual.com"
+        ],
+        "quickReply": [
+            "AS Consultores",
+            "Service Group",
+            "Workmate"
+        ]
+    },
+    "ubicacion": {
+        "quickReply": [
+            "Trabajo Actual",
+            "Estudios de Camilo",
+            "¿Que es un chatbot?"
+        ],
+        "text": [
+            "Camilo vive en la comuna de Santiago, Región Metropolitana, Chile."
+        ]
+    },
+    "viajes": {
+        "text": [
+            "Camilo esta dispuesto a trabajar en regiones o fuera de Chile."
+        ],
+        "quickReply": [
+            "Trabajo Actual",
+            "¿Donde vive Camilo?",
+            "Estudios de Camilo",
+            "¿Que es un chatbot?"
+        ]
+    },
+    "workmate": {
+        "text": [
+            "En Workmate Limitada. (2011 - 2012) Desarrollador encargado de la toma de requerimientos de usuario, generar los requerimientos de software, hacer el diseño de las soluciones, modelamiento de bases de datos y codificación de aplicaciones. Las tecnologías utilizadas para el desarrollo de software son Javascript, PHP con el framework de desarrollo Codeigniter y MySQL como DBMS.",
+            "Su principal logro fué programar un sistema de hotelería para empresas del rubro minero, que permite organizar de forma eficiente los distintos tipos de habitaciones existentes en campamentos mineros considerando turnos día, tarde y noche y esquemas de turnos de X días de trabajo con Y días de descanso, incluyendo además reportes de uso, control de acceso y facturación. Con la puesta en marcha se permitió maximizar los recursos disponibles para alojar trabajadores en minera Sierra Gorda y Radomiro Tomic de la Vicepresidente de Operaciones Norte de Codelco."
+        ],
+        "quickReply": [
+            "Becual",
+            "AS Consultores",
+            "Service Group",
+            "Estudios de Camilo"
+        ]
+    }
+}
