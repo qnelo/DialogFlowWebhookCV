@@ -46,8 +46,9 @@ test('telegram source replyAdapter', t => {
     //Arrange
     const responseText = {
         text: ['texto de prueba.', 'segundo texto de prueba'],
-        quickReply: ['0', '1', '2', '3']
+        quickReply: true
     };
+    const replies = ['0', '1', '2', '3', '4', '5', '6', '7', '8'];
     const requestSource = 'telegram';
     const expectedReply = {
         fulfillmentText: responseText.text[0],
@@ -76,7 +77,7 @@ test('telegram source replyAdapter', t => {
     };
 
     // Act
-    const telegramQuickReply = replyAdapter(responseText, requestSource);
+    const telegramQuickReply = replyAdapter(responseText, replies, requestSource, undefined);
 
     // Assert
     t.deepEqual(telegramQuickReply, expectedReply);
