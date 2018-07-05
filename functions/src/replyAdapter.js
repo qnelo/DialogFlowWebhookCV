@@ -16,9 +16,13 @@ const quickRepliesFormatter = (replies, lastText) => {
 const getRandomReplies = (replies) => {
 
     let output = [];
+    let newReplies = replies.slice(0, replies.length);
     for (let index = 0; 3 > index; index++) {
-        const number = Math.floor((Math.random() * replies.length));
-        output.push(replies[number]);
+
+        const number = Math.floor((Math.random() * newReplies.length));
+        output.push(newReplies[number]);
+        newReplies = newReplies.filter(i => newReplies.indexOf(i) !== newReplies.indexOf(newReplies[number]));
+
     }
     return output;
 };
