@@ -23,9 +23,10 @@ exports.curriculumVitaeResponses = functions.https.onRequest((request, firebaseR
     const firestoreResponse = firestore(db).getResponse(action);
     const firestoreReplies = firestore(db).getQuickReplies();
 
-    Promise.all([firestoreResponse, firestoreReplies]).then(firestoreData => {
-        firebaseResponse.json(
-            replyAdapter(firestoreData[0], firestoreData[1], requestSource, context)
-        );
-    });
+    Promise.all([firestoreResponse, firestoreReplies])
+        .then(firestoreData => {
+            firebaseResponse.json(
+                replyAdapter(firestoreData[0], firestoreData[1], requestSource, context)
+            );
+        });
 });

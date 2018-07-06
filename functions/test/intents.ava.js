@@ -49,12 +49,7 @@ test.cb('Telegram Saludo', t => {
                 platform: request.body.originalDetectIntentRequest.payload.source.toUpperCase(),
                 quickReplies: {
                     title: responses.saludo.text[1],
-                    quickReplies: [
-                        responses.saludo.quickReply[0],
-                        responses.saludo.quickReply[1],
-                        responses.saludo.quickReply[2],
-                        responses.saludo.quickReply[3]
-                    ]
+                    quickReplies: []
                 }
             }
         ]
@@ -63,8 +58,18 @@ test.cb('Telegram Saludo', t => {
     const response = {
         json: (objectResponse) => {
             // Assert
-            t.deepEqual(objectResponse.data, expectedResponse.data);
-            t.deepEqual(objectResponse, expectedResponse);
+            t.is(objectResponse.fulfillmentText, expectedResponse.fulfillmentText);
+            t.deepEqual(
+                objectResponse.fulfillmentMessages[0], expectedResponse.fulfillmentMessages[0]
+            );
+            t.is(
+                objectResponse.fulfillmentMessages[1].platform,
+                expectedResponse.fulfillmentMessages[1].platform
+            );
+            t.is(
+                objectResponse.fulfillmentMessages[1].quickReplies.title,
+                expectedResponse.fulfillmentMessages[1].quickReplies.title
+            );
             t.end();
         }
     };
@@ -174,12 +179,7 @@ test.cb('Telegram anoExperiencia intent', t => {
                 platform: request.body.originalDetectIntentRequest.payload.source.toUpperCase(),
                 quickReplies: {
                     title: responses.anoExperiencia.text[0],
-                    quickReplies: [
-                        responses.anoExperiencia.quickReply[0],
-                        responses.anoExperiencia.quickReply[1],
-                        responses.anoExperiencia.quickReply[2],
-                        responses.anoExperiencia.quickReply[3]
-                    ]
+                    quickReplies: []
                 }
             }
         ]
@@ -188,8 +188,18 @@ test.cb('Telegram anoExperiencia intent', t => {
     const response = {
         json: (objectResponse) => {
             // Assert
-            t.deepEqual(objectResponse.data, expectedResponse.data);
-            t.deepEqual(objectResponse, expectedResponse);
+            t.is(objectResponse.fulfillmentText, expectedResponse.fulfillmentText);
+            t.deepEqual(
+                objectResponse.fulfillmentMessages[0], expectedResponse.fulfillmentMessages[0]
+            );
+            t.is(
+                objectResponse.fulfillmentMessages[1].platform,
+                expectedResponse.fulfillmentMessages[1].platform
+            );
+            t.is(
+                objectResponse.fulfillmentMessages[1].quickReplies.title,
+                expectedResponse.fulfillmentMessages[1].quickReplies.title
+            );
             t.end();
         }
     };
@@ -223,11 +233,7 @@ test.cb('Telegram Becual intent', t => {
                 platform: request.body.originalDetectIntentRequest.payload.source.toUpperCase(),
                 quickReplies: {
                     title: responses.becual.text[3],
-                    quickReplies: [
-                        responses.becual.quickReply[0],
-                        responses.becual.quickReply[1],
-                        responses.becual.quickReply[2]
-                    ]
+                    quickReplies: []
                 }
             }
         ]
@@ -236,8 +242,18 @@ test.cb('Telegram Becual intent', t => {
     const response = {
         json: (objectResponse) => {
             // Assert
-            t.deepEqual(objectResponse.data, expectedResponse.data);
-            t.deepEqual(objectResponse, expectedResponse);
+            t.is(objectResponse.fulfillmentText, expectedResponse.fulfillmentText);
+            t.deepEqual(
+                objectResponse.fulfillmentMessages[0], expectedResponse.fulfillmentMessages[0]
+            );
+            t.is(
+                objectResponse.fulfillmentMessages[1].platform,
+                expectedResponse.fulfillmentMessages[1].platform
+            );
+            t.is(
+                objectResponse.fulfillmentMessages[1].quickReplies.title,
+                expectedResponse.fulfillmentMessages[1].quickReplies.title
+            );
             t.end();
         }
     };
@@ -270,11 +286,7 @@ test.cb('Telegram disponibilidad intent', t => {
                 platform: request.body.originalDetectIntentRequest.payload.source.toUpperCase(),
                 quickReplies: {
                     title: responses.disponibilidad.text[2],
-                    quickReplies: [
-                        responses.disponibilidad.quickReply[0],
-                        responses.disponibilidad.quickReply[1],
-                        responses.disponibilidad.quickReply[2]
-                    ]
+                    quickReplies: []
                 }
             }
         ]
@@ -283,8 +295,18 @@ test.cb('Telegram disponibilidad intent', t => {
     const response = {
         json: (objectResponse) => {
             // Assert
-            t.deepEqual(objectResponse.data, expectedResponse.data);
-            t.deepEqual(objectResponse, expectedResponse);
+            t.is(objectResponse.fulfillmentText, expectedResponse.fulfillmentText);
+            t.deepEqual(
+                objectResponse.fulfillmentMessages[0], expectedResponse.fulfillmentMessages[0]
+            );
+            t.is(
+                objectResponse.fulfillmentMessages[1].platform,
+                expectedResponse.fulfillmentMessages[1].platform
+            );
+            t.is(
+                objectResponse.fulfillmentMessages[1].quickReplies.title,
+                expectedResponse.fulfillmentMessages[1].quickReplies.title
+            );
             t.end();
         }
     };
