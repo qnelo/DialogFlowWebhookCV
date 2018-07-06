@@ -12,12 +12,26 @@ const getResponse = db => action => {
 };
 
 /**
+ * Get the quick replies from firestore
+ * @param {object} db firestore instance
+ * @returns {function} function that delivers the quick replies
+ */
+const getQuickReplies = db => () => {
+
+    return db.collection('quickReplies').doc().get()
+        .then(dbResponse => {
+            return dbResponse.data();
+        });
+};
+
+/**
  * Exposes all methods
  * @param {object} db firestore instance
  * @returns {object} methods
  */
 module.exports = db => {
     return {
-        getResponse: getResponse(db)
+        getResponse: getResponse(db),
+        getQuickReplies: getQuickReplies(db)
     };
 };

@@ -6,7 +6,7 @@ const newStandartRequest = require('./newStandartRequest.json');
 const responses = require('./mock/responses.json');
 let myFunctions = rewire('../index');
 
-const db = require('./mock/firebaseMock');
+const db = require('./mock/firestoreMock');
 
 myFunctions.__set__('db', db);
 
