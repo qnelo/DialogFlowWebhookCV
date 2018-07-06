@@ -21,7 +21,9 @@ const getRandomReplies = (replies, answersNumber) => {
 
         const number = Math.floor((Math.random() * newReplies.length));
         output.push(newReplies[number]);
-        newReplies = newReplies.filter(i => newReplies.indexOf(i) !== newReplies.indexOf(newReplies[number]));
+        newReplies = newReplies.filter(
+            reply => newReplies.indexOf(reply) !== newReplies.indexOf(newReplies[number])
+        );
 
     }
     return output;
@@ -41,7 +43,9 @@ module.exports = (selectedResponse, replies, requestSource, context) => {
     output.fulfillmentText
         = replaceValues(context, selectedResponse.text[0]);
 
-    const randomReplies = getRandomReplies(replies, 3);
+    const randomReplies = selectedResponse.quickReply
+        ? getRandomReplies(replies, 3)
+        : [];
 
     // TELEGRAM -> Last text must be the title field in quick replys
     let textArray = Object.create(selectedResponse.text);

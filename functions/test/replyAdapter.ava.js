@@ -12,13 +12,11 @@ test.skip('telegram replyAdapter with media', t => {
     const requestSource = 'telegram';
     const expectedReply = {
         fulfillmentText: responseText.text[0],
-        // speech: responseText.text[0],
         fulfillmentMessages: [
             {
                 type: 3,
                 platform: requestSource.toUpperCase(),
-                imageUrl: responseText.media,
-
+                imageUrl: responseText.media
             },
             {
                 type: 2,
@@ -65,12 +63,44 @@ test('telegram source replyAdapter', t => {
                 platform: requestSource,
                 quickReplies: {
                     title: responseText.text[1],
-                    quickReplies: [
-                        responseText.quickReply[0],
-                        responseText.quickReply[1],
-                        responseText.quickReply[2],
-                        responseText.quickReply[3]
+                    quickReplies: []
+                }
+            }
+        ]
+    };
+
+    // Act
+    const telegramQuickReply = replyAdapter(responseText, replies, requestSource, undefined);
+
+    // Assert
+    t.deepEqual(telegramQuickReply.fulfillmentMessages[0], expectedReply.fulfillmentMessages[0]);
+});
+
+test('telegram source replyAdapter with quickReply = false', t => {
+
+    //Arrange
+    const responseText = {
+        text: ['texto de prueba.', 'segundo texto de prueba'],
+        quickReply: false
+    };
+    const replies = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i'];
+    const requestSource = 'telegram';
+    const expectedReply = {
+        fulfillmentText: responseText.text[0],
+        fulfillmentMessages: [
+            {
+                platform: requestSource,
+                text: {
+                    text: [
+                        responseText.text[0]
                     ]
+                }
+            },
+            {
+                platform: requestSource,
+                quickReplies: {
+                    title: responseText.text[1],
+                    quickReplies: []
                 }
             }
         ]
