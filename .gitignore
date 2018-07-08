@@ -34,3 +34,9 @@ typings
 
 # Environment variables
 .env
+
+# GCP test credential
+credential.json
+
+functions/utils/firebase_responses.json
+functions/utils/quickReplies.json
