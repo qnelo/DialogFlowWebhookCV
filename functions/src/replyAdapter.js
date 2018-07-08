@@ -13,6 +13,12 @@ const quickRepliesFormatter = (replies, lastText) => {
     };
 };
 
+/**
+ * Return a random list of quick replies
+ * @param {array} replies replies list
+ * @param {integer} answersNumber number of quick replies
+ * @returns {array} list of random replies
+ */
 const getRandomReplies = (replies, answersNumber) => {
 
     let output = [];
@@ -24,7 +30,6 @@ const getRandomReplies = (replies, answersNumber) => {
         newReplies = newReplies.filter(
             reply => newReplies.indexOf(reply) !== newReplies.indexOf(newReplies[number])
         );
-
     }
     return output;
 };
@@ -44,7 +49,7 @@ module.exports = (selectedResponse, replies, requestSource, context) => {
         = replaceValues(context, selectedResponse.text[0]);
 
     const randomReplies = selectedResponse.quickReply
-        ? getRandomReplies(replies.replies || [], 3)
+        ? getRandomReplies(replies.replies || [], 2)
         : [];
 
     // TELEGRAM -> Last text must be the title field in quick replys
