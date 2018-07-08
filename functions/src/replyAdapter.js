@@ -44,7 +44,7 @@ module.exports = (selectedResponse, replies, requestSource, context) => {
         = replaceValues(context, selectedResponse.text[0]);
 
     const randomReplies = selectedResponse.quickReply
-        ? getRandomReplies(replies, 3)
+        ? getRandomReplies(replies.replies || [], 3)
         : [];
 
     // TELEGRAM -> Last text must be the title field in quick replys

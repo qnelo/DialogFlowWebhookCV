@@ -1,26 +1,28 @@
 {
-    "replys": [
-        "Años de experiencia",
-        "AS Consultores",
-        "¿Que es Becual?",
-        "¿Que es un chatbot?",
-        "¿Por qué un chatbot?",
-        "Quiero contactar a Camilo",
-        "Disponibilidad de Camilo",
-        "¿Que edad tiene Camilo?",
-        "Estado civil",
-        "Estudios de Camilo",
-        "Experiencia de Camilo",
-        "¿Que herramientas conoce?",
-        "¿Que idiomas habla?",
-        "Pasatiempos",
-        "Trabajo en Service Group",
-        "Tecnologías detrás de un chatbot",
-        "Tecnologías que ocupa",
-        "Trabajos",
-        "Trabajo Actual",
-        "¿Donde vive Camilo?",
-        "Trabajo en Workmate",
-        "Trabajo en Becual"
-    ]
+    "replies": {
+        "replies": [
+            "Años de experiencia",
+            "AS Consultores",
+            "¿Qué es Becual?",
+            "¿Qué es un chatbot?",
+            "¿Por qué un chatbot?",
+            "Quiero contactar a Camilo",
+            "Disponibilidad de Camilo",
+            "¿Qué edad tiene Camilo?",
+            "Estado civil",
+            "Estudios de Camilo",
+            "Experiencia de Camilo",
+            "¿Qué herramientas conoce?",
+            "¿Qué idiomas habla?",
+            "Pasatiempos",
+            "Trabajo en Service Group",
+            "Tecnologías detrás de un chatbot",
+            "Tecnologías que ocupa",
+            "Trabajos que ha tenido",
+            "Trabajo Actual",
+            "¿Donde vive Camilo?",
+            "Trabajo en Workmate",
+            "Trabajo en Becual"
+        ]
+    }
 }

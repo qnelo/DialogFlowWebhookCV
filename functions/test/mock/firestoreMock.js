@@ -9,7 +9,7 @@ const doc = collectionName => (document) => {
                     data: () => {
                         return 'responses' === collectionName
                             ? responsesMock[document]
-                            : repliesMock.replys;
+                            : repliesMock[document];
                     }
                 });
             });

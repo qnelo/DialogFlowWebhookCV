@@ -16,9 +16,9 @@ const getResponse = db => action => {
  * @param {object} db firestore instance
  * @returns {function} function that delivers the quick replies
  */
-const getQuickReplies = db => () => {
+const getQuickReplies = db => replies => {
 
-    return db.collection('quickReplies').doc().get()
+    return db.collection('quickReplies').doc(replies).get()
         .then(dbResponse => {
             return dbResponse.data();
         });

@@ -21,7 +21,7 @@ exports.curriculumVitaeResponses = functions.https.onRequest((request, firebaseR
     console.info(`request: {requestSource: ${requestSource}, action: ${action}}`);
 
     const firestoreResponse = firestore(db).getResponse(action);
-    const firestoreReplies = firestore(db).getQuickReplies();
+    const firestoreReplies = firestore(db).getQuickReplies('replies');
 
     Promise.all([firestoreResponse, firestoreReplies])
         .then(firestoreData => {
