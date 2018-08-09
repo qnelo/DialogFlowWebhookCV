@@ -5,6 +5,7 @@ const replyAdapter = require('./src/replyAdapter');
 const firestore = require('./src/firestore');
 
 admin.initializeApp(functions.config().firebase);
+admin.firestore().settings({ timestampsInSnapshots: true });
 const db = admin.firestore();
 
 exports.curriculumVitaeResponses = functions.https.onRequest((request, firebaseResponse) => {
