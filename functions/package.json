@@ -20,7 +20,7 @@
     "actions-on-google": "^1.5.x",
     "apiai": "^4.0.3",
     "firebase-admin": "^5.12.1",
-    "firebase-functions": "^1.0.3"
+    "firebase-functions": "^2.0.2"
   },
   "devDependencies": {
     "ava": "^0.22.0",
