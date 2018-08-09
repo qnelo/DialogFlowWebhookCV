@@ -132,13 +132,13 @@ test.cb('Default intent with undefined request source', t => {
             {
                 platform: 'PLATFORM_UNSPECIFIED',
                 text: {
-                    text: []
+                    text: [responses.default.text[0]]
                 }
             },
             {
                 platform: 'PLATFORM_UNSPECIFIED',
                 quickReplies: {
-                    title: responses.default.text[0],
+                    title: 'Respuestas rápidas',
                     quickReplies: []
                 }
             }

@@ -54,7 +54,10 @@ module.exports = (selectedResponse, replies, requestSource, context) => {
 
     // TELEGRAM -> Last text must be the title field in quick replys
     let textArray = Object.create(selectedResponse.text);
-    const lastText = textArray.pop();
+
+    const lastText = 'TELEGRAM' === requestSource
+        ? textArray.pop()
+        : 'Respuestas rápidas';
 
     output.fulfillmentMessages = [];
     output.fulfillmentMessages.push({
