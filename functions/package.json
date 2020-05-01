@@ -14,13 +14,16 @@
     "test": "node_modules/.bin/nyc --reporter=lcov --reporter=text --check-coverage --lines 95 --functions 95 --branches 95 node node_modules/.bin/ava -v ./**/*ava.js",
     "test:report": "node_modules/.bin/nyc report --reporter=lcov --reporter=lcov --check-coverage --lines 95 --functions 95 --branches 95 node node_modules/.bin/ava -v ./**/*ava.js",
     "test:watch": "node node_modules/.bin/ava --verbose --watch ./**/*ava.js",
-    "report-coverage": "codecov"
+    "report-coverage": "codecov",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "actions-on-google": "^1.5.x",
     "apiai": "^4.0.3",
     "firebase-admin": "^5.13.1",
-    "firebase-functions": "^2.0.2"
+    "firebase-functions": "^2.0.2",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "ava": "^0.22.0",
@@ -28,5 +31,6 @@
     "ramda": "^0.25.0",
     "rewire": "^4.0.1",
     "sinon": "^4.0.1"
-  }
+  },
+  "snyk": true
 }
