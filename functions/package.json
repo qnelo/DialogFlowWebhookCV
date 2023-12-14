@@ -17,9 +17,9 @@
     "report-coverage": "codecov"
   },
   "dependencies": {
-    "actions-on-google": "^1.5.x",
+    "actions-on-google": "^3.0.0",
     "apiai": "^4.0.3",
-    "firebase-admin": "^5.13.1",
+    "firebase-admin": "^7.0.0",
     "firebase-functions": "^2.0.2"
   },
   "devDependencies": {
